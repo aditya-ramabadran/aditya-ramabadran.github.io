@@ -27,7 +27,7 @@ description: Machine learning research engineer with a background in mathematics
     <div class="timeline-copy">
       <h3><a href="https://math.uchicago.edu/~may/REU2025/">University of Chicago Math REU</a></h3>
       <p>Studied ground states, concentration compactness, and blow-up dynamics in the nonlinear Schrödinger equation with David Bowman and Peter May.</p>
-      <p class="timeline-paper"><span>Paper</span><a href="https://math.uchicago.edu/~may/REU2025/REUPapers/Ramabadran.pdf">Ground States, Concentration Compactness, and Blow-Up Dynamics in the Nonlinear Schrödinger Equation</a></p>
+      <p class="timeline-note"><span>Paper</span><a href="https://math.uchicago.edu/~may/REU2025/REUPapers/Ramabadran.pdf">Ground States, Concentration Compactness, and Blow-Up Dynamics in the Nonlinear Schrödinger Equation</a></p>
     </div>
   </div>
 
@@ -37,7 +37,7 @@ description: Machine learning research engineer with a background in mathematics
     <div class="timeline-copy">
       <h3><a href="https://www.ams.org/opportunities/view/listing?listing_id=494069">University of Washington Math REU</a></h3>
       <p>Worked with Bobby Wilson on harmonic analysis and Fuglede's conjecture.</p>
-      <p class="timeline-paper"><span>Paper</span><a href="https://arxiv.org/abs/2508.15159">Spectrality of Product Sets with a Perturbed Interval Factor</a>, with Johannes van Vliet</p>
+      <p class="timeline-note"><span>Paper</span><a href="https://arxiv.org/abs/2508.15159">Spectrality of Product Sets with a Perturbed Interval Factor</a>, with Johannes van Vliet</p>
     </div>
   </div>
 
@@ -65,6 +65,7 @@ description: Machine learning research engineer with a background in mathematics
     <div class="timeline-copy">
       <h3><a href="https://www.berkeley.edu/">UC Berkeley</a></h3>
       <p>Studied mathematics and computer science.</p>
+      <p class="timeline-note"><span>Teaching</span>Four-time teaching assistant for EECS 127 (Convex Optimization); contributed to the <a href="https://eecs127.github.io/assets/notes/eecs127_reader.pdf">course reader</a>.</p>
     </div>
   </div>
 </div>
