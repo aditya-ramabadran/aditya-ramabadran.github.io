@@ -35,7 +35,7 @@ description: Machine learning research engineer with a background in mathematics
     <div class="timeline-year">2024</div>
     <div class="timeline-logo"><img src="{{ '/assets/images/logos/washington.png' | relative_url }}" alt="University of Washington logo"></div>
     <div class="timeline-copy">
-      <h3><a href="https://sites.math.washington.edu/~reu/">University of Washington Math REU</a></h3>
+      <h3><a href="https://www.ams.org/opportunities/view/listing?listing_id=494069">University of Washington Math REU</a></h3>
       <p>Worked with Bobby Wilson on harmonic analysis and Fuglede's conjecture.</p>
       <p class="timeline-paper"><span>Paper</span><a href="https://arxiv.org/abs/2508.15159">Spectrality of Product Sets with a Perturbed Interval Factor</a>, with Johannes van Vliet</p>
     </div>
