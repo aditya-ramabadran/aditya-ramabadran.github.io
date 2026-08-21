@@ -9,9 +9,7 @@ description: Machine learning research engineer with a background in mathematics
   <p>I studied mathematics and computer science at UC Berkeley. Previously, I worked on robotics and reinforcement learning, mathematical research in harmonic analysis and PDE, and numerical systems.</p>
 </section>
 
-## Path
-
-<div class="timeline">
+<div class="timeline" aria-label="Career and research history">
   <div class="timeline-item">
     <div class="timeline-year">2026–now</div>
     <div class="timeline-logo"><img src="{{ '/assets/images/logos/axiom.svg' | relative_url }}" alt="Axiom Math logo"></div>
@@ -66,6 +64,7 @@ description: Machine learning research engineer with a background in mathematics
       <h3><a href="https://www.berkeley.edu/">UC Berkeley</a></h3>
       <p>Studied mathematics and computer science.</p>
       <p class="timeline-note"><span>Teaching</span>Four-time teaching assistant for EECS 127 (Convex Optimization); contributed to the <a href="https://eecs127.github.io/assets/notes/eecs127_reader.pdf">course reader</a>.</p>
+      <p class="timeline-note"><span>Courses</span><a href="{{ '/courses/' | relative_url }}">Here</a> is a list of some of the courses I took.</p>
     </div>
   </div>
 </div>
