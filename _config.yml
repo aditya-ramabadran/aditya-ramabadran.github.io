@@ -1,0 +1,35 @@
+title: Aditya Ramabadran
+description: ML research engineer working on post-training, reasoning agents, and formal methods.
+url: "https://aditya-ramabadran.github.io"
+baseurl: ""
+repository: aditya-ramabadran/aditya-ramabadran.github.io
+
+author:
+  name: Aditya Ramabadran
+  email: aditya.ramabadran@berkeley.edu
+
+github_username: aditya-ramabadran
+twitter:
+  username: a_ramabadran
+
+markdown: kramdown
+permalink: /writing/:year/:month/:day/:title/
+timezone: America/Los_Angeles
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

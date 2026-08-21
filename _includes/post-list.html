@@ -1,0 +1,22 @@
+{% if site.posts.size > 0 %}
+  <ol class="post-list">
+    {% for post in site.posts limit: include.limit %}
+      <li class="post-list-item">
+        <div class="post-list-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+          {% if post.format %}<span>{{ post.format }}</span>{% endif %}
+        </div>
+        <div>
+          {% if post.external_url %}
+            <h3><a href="{{ post.external_url }}">{{ post.title }} <span class="external-mark" aria-label="External link">↗</span></a></h3>
+          {% else %}
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          {% endif %}
+          {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+{% else %}
+  <p class="empty-state">Longer notes and links to X articles will appear here. For shorter updates, follow <a href="https://x.com/a_ramabadran">@a_ramabadran</a>.</p>
+{% endif %}

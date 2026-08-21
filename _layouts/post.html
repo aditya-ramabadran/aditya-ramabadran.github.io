@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<article class="post">
+  <a class="back-link" href="{{ '/writing/' | relative_url }}">← All writing</a>
+  <header class="post-header">
+    <p class="eyebrow">{{ page.format | default: "Note" }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</p>
+  </header>
+  <div class="post-body">
+    {{ content }}
+  </div>
+</article>
