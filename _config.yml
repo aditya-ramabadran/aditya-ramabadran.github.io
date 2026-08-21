@@ -1,12 +1,11 @@
 title: Aditya Ramabadran
-description: ML research engineer working on post-training, reasoning agents, and formal methods.
+description: Machine learning research engineer with a background in mathematics and computer science.
 url: "https://aditya-ramabadran.github.io"
 baseurl: ""
 repository: aditya-ramabadran/aditya-ramabadran.github.io
 
 author:
   name: Aditya Ramabadran
-  email: aditya.ramabadran@berkeley.edu
 
 github_username: aditya-ramabadran
 twitter:

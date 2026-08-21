@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f5f2eb" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#111820" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
     <script>
       (function () {
         var saved = localStorage.getItem("theme");
@@ -21,14 +21,13 @@
     <div class="shell">
       <header class="sidebar">
         <a class="site-name" href="{{ '/' | relative_url }}">Aditya<br>Ramabadran</a>
-        <p class="site-description">ML research engineer working on post-training, reasoning agents, and formal methods.</p>
+        <p class="site-description">Machine learning, mathematics, and research.</p>
 
         <nav class="site-nav" aria-label="Primary navigation">
           <a {% if page.url == '/' %}aria-current="page"{% endif %} href="{{ '/' | relative_url }}">About</a>
           <a {% if page.url == '/writing/' %}aria-current="page"{% endif %} href="{{ '/writing/' | relative_url }}">Writing</a>
           <a href="https://github.com/aditya-ramabadran">GitHub</a>
           <a rel="me" href="https://x.com/a_ramabadran">X / Twitter</a>
-          <a href="mailto:{{ site.author.email }}">Email</a>
         </nav>
 
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">
@@ -40,7 +39,6 @@
         {{ content }}
         <footer class="site-footer">
           <span>© {{ site.time | date: '%Y' }} Aditya Ramabadran</span>
-          <span>Built with plain text and GitHub Pages.</span>
         </footer>
       </main>
     </div>
