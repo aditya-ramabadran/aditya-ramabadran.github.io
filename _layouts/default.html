@@ -21,13 +21,12 @@
     <div class="shell">
       <header class="sidebar">
         <a class="site-name" href="{{ '/' | relative_url }}">Aditya<br>Ramabadran</a>
-        <p class="site-description">Machine learning, mathematics, and research.</p>
 
         <nav class="site-nav" aria-label="Primary navigation">
           <a {% if page.url == '/' %}aria-current="page"{% endif %} href="{{ '/' | relative_url }}">About</a>
           <a {% if page.url == '/writing/' %}aria-current="page"{% endif %} href="{{ '/writing/' | relative_url }}">Writing</a>
-          <a href="https://github.com/aditya-ramabadran">GitHub</a>
           <a rel="me" href="https://x.com/a_ramabadran">X / Twitter</a>
+          <a href="https://github.com/aditya-ramabadran">GitHub</a>
         </nav>
 
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">

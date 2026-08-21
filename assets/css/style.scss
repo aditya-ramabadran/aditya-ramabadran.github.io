@@ -104,17 +104,11 @@ a:hover {
   color: var(--text);
 }
 
-.site-description {
-  margin: 1rem 0 1.25rem;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.45;
-}
-
 .site-nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-top: 1.25rem;
   gap: 0.4rem;
 }
 
@@ -399,10 +393,6 @@ p {
 
   .site-name br::after {
     content: " ";
-  }
-
-  .site-description {
-    margin-bottom: 0.9rem;
   }
 
   .site-nav {
