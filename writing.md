@@ -6,8 +6,8 @@ permalink: /writing/
 ---
 
 <header class="writing-intro">
-  <h1>Notes, experiments, and linked articles.</h1>
-  <p>Some pieces live on this site. Others point directly to articles on <a href="https://x.com/a_ramabadran">X</a>.</p>
+  <h1>Writing</h1>
+  <p>Notes, blog posts, random thoughts.</p>
 </header>
 
 {% include post-list.html %}

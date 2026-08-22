@@ -5,8 +5,8 @@ description: Machine learning research engineer with a background in mathematics
 ---
 
 <section class="intro">
-  <p>I am a Member of Technical Staff on the Core ML team at <a href="https://axiommath.ai/">Axiom Math</a>, where I work on post-training and evaluation for mathematical reasoning agents.</p>
-  <p>I studied mathematics and computer science at UC Berkeley. Previously, I worked on robotics and reinforcement learning, mathematical research in harmonic analysis and PDE, and numerical systems.</p>
+  <p>I am a Member of Technical Staff at <a href="https://axiommath.ai/">Axiom Math</a>, where I work on post-training for formal mathematical reasoning agents.</p>
+  <p>Previously, I studied mathematics and computer science at UC Berkeley. There, I worked on robotics and reinforcement learning research as well as mathematical research in harmonic analysis and PDE.</p>
 </section>
 
 <div class="timeline" aria-label="Career and research history">
@@ -24,7 +24,7 @@ description: Machine learning research engineer with a background in mathematics
     <div class="timeline-logo timeline-logo--tall"><img src="{{ '/assets/images/logos/uchicago.png' | relative_url }}" alt="University of Chicago logo"></div>
     <div class="timeline-copy">
       <h3><a href="https://math.uchicago.edu/~may/REU2025/">University of Chicago Math REU</a></h3>
-      <p>Studied ground states, concentration compactness, and blow-up dynamics in the nonlinear Schrödinger equation with David Bowman and Peter May.</p>
+      <p>Studied ground states, concentration compactness, and blow-up dynamics in the nonlinear Schrödinger equation with David Bowman.</p>
       <p class="timeline-note"><span>Paper</span><a href="https://math.uchicago.edu/~may/REU2025/REUPapers/Ramabadran.pdf">Ground States, Concentration Compactness, and Blow-Up Dynamics in the Nonlinear Schrödinger Equation</a></p>
     </div>
   </div>
