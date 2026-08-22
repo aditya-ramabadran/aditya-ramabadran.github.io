@@ -15,7 +15,7 @@ description: Machine learning research engineer with a background in mathematics
     <div class="timeline-logo"><img src="{{ '/assets/images/logos/axiom.svg' | relative_url }}" alt="Axiom Math logo"></div>
     <div class="timeline-copy">
       <h3><a href="https://axiommath.ai/">Axiom Math</a></h3>
-      <p>Member of Technical Staff, Core ML. Post-training, evaluation, and systems for mathematical reasoning agents.</p>
+      <p>Co-led development of post-training pipeline for formal (Lean) mathematical reasoning agents.</p>
     </div>
   </div>
 
