@@ -123,6 +123,15 @@ a:hover {
   color: var(--text);
 }
 
+.site-nav > a:not(.social-link) {
+  padding-bottom: 0.08rem;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav > a[aria-current="page"] {
+  border-bottom-color: var(--accent);
+}
+
 .site-nav .social-link {
   display: grid;
   grid-template-columns: 0.9rem auto;
@@ -159,12 +168,6 @@ a:hover {
 .social-icon--linkedin {
   -webkit-mask-image: url("{{ '/assets/images/social/linkedin.svg' | relative_url }}");
   mask-image: url("{{ '/assets/images/social/linkedin.svg' | relative_url }}");
-}
-
-.site-nav a[aria-current="page"]::before {
-  content: "·";
-  margin-right: 0.35rem;
-  color: var(--accent);
 }
 
 .theme-toggle {
