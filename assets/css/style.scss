@@ -123,6 +123,44 @@ a:hover {
   color: var(--text);
 }
 
+.site-nav .social-link {
+  display: grid;
+  grid-template-columns: 0.9rem auto;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.site-nav .social-link--first {
+  margin-top: 0.35rem;
+}
+
+.social-icon {
+  width: 0.82rem;
+  height: 0.82rem;
+  background-color: currentColor;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.social-icon--x {
+  -webkit-mask-image: url("{{ '/assets/images/social/x.svg' | relative_url }}");
+  mask-image: url("{{ '/assets/images/social/x.svg' | relative_url }}");
+}
+
+.social-icon--github {
+  -webkit-mask-image: url("{{ '/assets/images/social/github.svg' | relative_url }}");
+  mask-image: url("{{ '/assets/images/social/github.svg' | relative_url }}");
+}
+
+.social-icon--linkedin {
+  -webkit-mask-image: url("{{ '/assets/images/social/linkedin.svg' | relative_url }}");
+  mask-image: url("{{ '/assets/images/social/linkedin.svg' | relative_url }}");
+}
+
 .site-nav a[aria-current="page"]::before {
   content: "·";
   margin-right: 0.35rem;
