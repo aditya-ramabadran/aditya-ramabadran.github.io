@@ -20,17 +20,17 @@ description: Machine learning research engineer with a background in mathematics
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-year">2025</div>
+    <div class="timeline-year">Summer 2025</div>
     <div class="timeline-logo timeline-logo--tall"><img src="{{ '/assets/images/logos/uchicago.png' | relative_url }}" alt="University of Chicago logo"></div>
     <div class="timeline-copy">
       <h3><a href="https://math.uchicago.edu/~may/REU2025/">University of Chicago Math REU</a></h3>
-      <p>Studied ground states, concentration compactness, and blow-up dynamics in the nonlinear Schrödinger equation with David Bowman.</p>
+      <p>Worked with David Bowman on dispersive PDE (concentration compactness, NLS).</p>
       <p class="timeline-note"><span>Paper</span><a href="https://math.uchicago.edu/~may/REU2025/REUPapers/Ramabadran.pdf">Ground States, Concentration Compactness, and Blow-Up Dynamics in the Nonlinear Schrödinger Equation</a></p>
     </div>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-year">2024</div>
+    <div class="timeline-year">Summer 2024</div>
     <div class="timeline-logo"><img src="{{ '/assets/images/logos/washington.png' | relative_url }}" alt="University of Washington logo"></div>
     <div class="timeline-copy">
       <h3><a href="https://www.ams.org/opportunities/view/listing?listing_id=494069">University of Washington Math REU</a></h3>
@@ -49,7 +49,7 @@ description: Machine learning research engineer with a background in mathematics
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-year">2022</div>
+    <div class="timeline-year">Summer 2022</div>
     <div class="timeline-logo timeline-logo--wide"><img src="{{ '/assets/images/logos/voleon.png' | relative_url }}" alt="The Voleon Group logo"></div>
     <div class="timeline-copy">
       <h3><a href="https://voleon.com/">The Voleon Group</a></h3>
