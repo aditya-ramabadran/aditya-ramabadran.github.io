@@ -90,6 +90,24 @@ a:hover {
   align-self: start;
 }
 
+.profile-photo {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.profile-photo img {
+  display: block;
+  width: 250%;
+  max-width: none;
+  height: auto;
+  transform: translate(-30%, -24%);
+}
+
 .site-name {
   display: inline-block;
   color: var(--text);
@@ -332,6 +350,13 @@ p {
   color: var(--accent);
 }
 
+.post-list-item h3 .external-link {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.45rem;
+  align-items: start;
+}
+
 .post-list-item p,
 .empty-state {
   margin: 0.3rem 0 0;
@@ -340,8 +365,24 @@ p {
 }
 
 .external-mark {
+  margin-top: 0.2em;
   color: var(--faint);
-  font-size: 0.82em;
+  font-size: 0.74em;
+  line-height: 1;
+}
+
+.writing-all {
+  margin: 1.15rem 0 0;
+  font-size: 0.86rem;
+}
+
+.writing-all a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.writing-all a:hover {
+  color: var(--accent);
 }
 
 .writing-intro {

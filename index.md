@@ -44,7 +44,7 @@ description: Machine learning research engineer with a background in mathematics
     <div class="timeline-logo"><img src="{{ '/assets/images/logos/bair.svg' | relative_url }}" alt="Berkeley AI Research logo"></div>
     <div class="timeline-copy">
       <h3><a href="https://bair.berkeley.edu/">Berkeley AI Research</a></h3>
-      <p>Researched long-horizon robotic manipulation and reinforcement learning in Sergey Levine's RAIL lab.</p>
+      <p>Researched long-horizon robotic manipulation and reinforcement learning in Sergey Levine's <a href="http://rail.eecs.berkeley.edu/">RAIL lab</a>.</p>
     </div>
   </div>
 
@@ -73,4 +73,4 @@ description: Machine learning research engineer with a background in mathematics
 
 {% include post-list.html limit=3 %}
 
-<p><a href="{{ '/writing/' | relative_url }}">View all writing →</a></p>
+<p class="writing-all"><a href="{{ '/writing/' | relative_url }}">View all writing <span aria-hidden="true">→</span></a></p>
