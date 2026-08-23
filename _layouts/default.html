@@ -23,23 +23,27 @@
         <div class="profile-photo">
           <img src="{{ '/assets/images/aditya-profile.png' | relative_url }}" alt="Aditya Ramabadran">
         </div>
-        <a class="site-name" href="{{ '/' | relative_url }}">Aditya<br>Ramabadran</a>
+        <a class="site-name" href="{{ '/' | relative_url }}"><span>Aditya</span><br><span>Ramabadran</span></a>
 
         <nav class="site-nav" aria-label="Primary navigation">
-          <a {% if page.url == '/' %}aria-current="page"{% endif %} href="{{ '/' | relative_url }}">About</a>
-          <a {% if page.url == '/writing/' %}aria-current="page"{% endif %} href="{{ '/writing/' | relative_url }}">Writing</a>
-          <a class="social-link social-link--first" rel="me" href="https://x.com/a_ramabadran">
-            <span class="social-icon social-icon--x" aria-hidden="true"></span>
-            <span>X / Twitter</span>
-          </a>
-          <a class="social-link" href="https://github.com/aditya-ramabadran">
-            <span class="social-icon social-icon--github" aria-hidden="true"></span>
-            <span>GitHub</span>
-          </a>
-          <a class="social-link" href="https://www.linkedin.com/in/aditya-ramabadran/">
-            <span class="social-icon social-icon--linkedin" aria-hidden="true"></span>
-            <span>LinkedIn</span>
-          </a>
+          <div class="site-nav-group site-nav-pages">
+            <a {% if page.url == '/' %}aria-current="page"{% endif %} href="{{ '/' | relative_url }}">About</a>
+            <a {% if page.url == '/writing/' %}aria-current="page"{% endif %} href="{{ '/writing/' | relative_url }}">Writing</a>
+          </div>
+          <div class="site-nav-group site-nav-social">
+            <a class="social-link" rel="me" href="https://x.com/a_ramabadran">
+              <span class="social-icon social-icon--x" aria-hidden="true"></span>
+              <span>X / Twitter</span>
+            </a>
+            <a class="social-link" href="https://github.com/aditya-ramabadran">
+              <span class="social-icon social-icon--github" aria-hidden="true"></span>
+              <span>GitHub</span>
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/in/aditya-ramabadran/">
+              <span class="social-icon social-icon--linkedin" aria-hidden="true"></span>
+              <span>LinkedIn</span>
+            </a>
+          </div>
         </nav>
 
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">
