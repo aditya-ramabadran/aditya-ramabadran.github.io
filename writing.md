@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Writing
+browser_title: "Aditya Ramabadran | Writing"
 description: Notes and linked X articles by Aditya Ramabadran.
 permalink: /writing/
 ---

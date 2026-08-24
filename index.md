@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Aditya Ramabadran
+browser_title: "Aditya Ramabadran | About Me"
 description: Machine learning research engineer with a background in mathematics and computer science.
 ---
 
