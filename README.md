@@ -26,6 +26,8 @@ description: "One sentence shown in the writing index."
 Post body in Markdown.
 ```
 
+Native posts automatically get a table of contents when they contain at least two section headings. Add `toc: false` to the front matter to hide it for a particular post.
+
 ## Add a link-only X article
 
 Create the same kind of dated file, but add `external_url` and `external_only: true`. The writing indexes will link the title directly to X instead of opening a local post.

@@ -19,7 +19,16 @@ layout: default
       <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt }}">
     </figure>
   {% endif %}
+  {% unless page.toc == false %}
+    <nav class="post-toc" aria-label="Table of contents" data-post-toc hidden>
+      <p class="post-toc-title">Contents</p>
+      <ol class="post-toc-list" data-post-toc-list></ol>
+    </nav>
+  {% endunless %}
   <div class="post-body">
     {{ content }}
   </div>
 </article>
+{% unless page.toc == false %}
+  <script src="{{ '/assets/js/post-toc.js' | relative_url }}" defer></script>
+{% endunless %}

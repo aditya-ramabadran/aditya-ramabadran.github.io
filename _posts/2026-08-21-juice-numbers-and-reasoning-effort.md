@@ -7,6 +7,7 @@ external_url: "https://x.com/a_ramabadran/status/2090841929621885084"
 hero_image: "/assets/images/writing/juice-numbers/hero.jpg"
 hero_alt: "What does Juice 48 actually do? Reverse-engineering GPT reasoning effort."
 math: true
+toc: true
 ---
 
 Recently there's been a lot of buzz on Twitter around what happens when you change the reasoning effort (low/medium/high/etc) in coding agents like Codex, ChatGPT, or the API. Many people didn't realize before that doing this actually busts the cache for your chat (and thus uses up more of your usage/credits).

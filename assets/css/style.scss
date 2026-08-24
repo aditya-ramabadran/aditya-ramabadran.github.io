@@ -503,9 +503,60 @@ p {
   border-radius: 3px;
 }
 
+.post-toc {
+  max-width: 65ch;
+  margin-top: 1.75rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.post-toc-title {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.post-toc-list,
+.post-toc-sublist {
+  margin: 0.55rem 0 0;
+  padding-left: 1.35rem;
+}
+
+.post-toc-sublist {
+  margin-top: 0.3rem;
+  list-style-type: lower-alpha;
+}
+
+.post-toc li {
+  padding-left: 0.15rem;
+  color: var(--faint);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.post-toc li + li {
+  margin-top: 0.28rem;
+}
+
+.post-toc a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.post-toc a:hover {
+  color: var(--accent);
+}
+
 .post-body {
   max-width: 65ch;
   padding-top: 1.75rem;
+}
+
+.post-body h2,
+.post-body h3 {
+  scroll-margin-top: 1rem;
 }
 
 .post-body h2 {
