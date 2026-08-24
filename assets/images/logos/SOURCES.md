@@ -1,3 +1,7 @@
+---
+sitemap: false
+---
+
 # Logo sources
 
 Downloaded from the organizations' own sites on August 21, 2026:
