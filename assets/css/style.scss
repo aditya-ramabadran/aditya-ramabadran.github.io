@@ -191,6 +191,11 @@ a:hover {
   mask-image: url("{{ '/assets/images/social/linkedin.svg' | relative_url }}");
 }
 
+.social-icon--strava {
+  -webkit-mask-image: url("{{ '/assets/images/social/strava.svg' | relative_url }}");
+  mask-image: url("{{ '/assets/images/social/strava.svg' | relative_url }}");
+}
+
 .theme-toggle {
   margin-top: 1.25rem;
   padding: 0;

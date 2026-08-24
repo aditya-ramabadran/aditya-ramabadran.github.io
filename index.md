@@ -17,6 +17,7 @@ description: Machine learning research engineer with a background in mathematics
     <div class="timeline-copy">
       <h3><a href="https://axiommath.ai/">Axiom Math</a></h3>
       <p>Co-led development of post-training pipeline for formal (Lean) mathematical reasoning agents.</p>
+      <p class="timeline-note"><span>Formalization</span><a href="https://primegaps.axiommath.ai/">Agent helped formalize the 2014 bounded-prime-gaps result (H₁ ≤ 246) in Lean.</a></p>
     </div>
   </div>
 
