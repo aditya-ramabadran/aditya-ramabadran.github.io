@@ -7,7 +7,7 @@
           {% if post.format %}<span>{{ post.format }}</span>{% endif %}
         </div>
         <div>
-          {% if post.external_url %}
+          {% if post.external_url and post.external_only %}
             <h3><a class="external-link" href="{{ post.external_url }}"><span>{{ post.title }}</span><span class="external-mark" aria-label="External link">↗</span></a></h3>
           {% else %}
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
