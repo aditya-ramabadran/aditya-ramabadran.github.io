@@ -28,6 +28,8 @@ Post body in Markdown.
 
 Native posts automatically get a table of contents when they contain at least two section headings. Add `toc: false` to the front matter to hide it for a particular post.
 
+Section headings also get permalink controls that scroll to the section and copy its URL. Hero images and figures open in an in-page expanded view with mouse, touch, or keyboard controls; add `lightbox: false` to disable that behavior for a particular post.
+
 ## Add a link-only X article
 
 Create the same kind of dated file, but add `external_url` and `external_only: true`. The writing indexes will link the title directly to X instead of opening a local post.
@@ -73,7 +75,7 @@ Post body in Markdown.
 - `_posts/`: native, external-only, and hybrid posts
 - `_layouts/`: shared page and post layouts
 - `assets/css/style.scss`: all site styling
-- `assets/js/theme.js`: light/dark theme preference
+- `assets/js/`: theme preference and article interactions
 
 The previous Academic Pages repository is preserved privately as
 `aditya-ramabadran.github.io-archive`.
