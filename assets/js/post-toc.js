@@ -3,10 +3,12 @@
   var list = document.querySelector("[data-post-toc-list]");
   var body = document.querySelector(".post-body");
 
-  if (!toc || !list || !body) return;
+  if (!body) return;
 
   var headings = Array.prototype.slice.call(body.querySelectorAll("h2, h3"));
-  if (headings.length < 2) return;
+  if (!headings.length) return;
+
+  var buildToc = toc && list && headings.length >= 2;
 
   var usedIds = {};
   var currentSection = null;
@@ -93,29 +95,31 @@
     usedIds[id] = true;
     heading.id = id;
 
-    var item = document.createElement("li");
-    var link = document.createElement("a");
-    link.href = "#" + id;
-    link.textContent = title;
-    item.appendChild(link);
+    if (buildToc) {
+      var item = document.createElement("li");
+      var link = document.createElement("a");
+      link.href = "#" + id;
+      link.textContent = title;
+      item.appendChild(link);
 
-    if (heading.tagName === "H2") {
-      list.appendChild(item);
-      currentSection = item;
-      currentSublist = null;
-    } else if (currentSection) {
-      if (!currentSublist) {
-        currentSublist = document.createElement("ol");
-        currentSublist.className = "post-toc-sublist";
-        currentSection.appendChild(currentSublist);
+      if (heading.tagName === "H2") {
+        list.appendChild(item);
+        currentSection = item;
+        currentSublist = null;
+      } else if (currentSection) {
+        if (!currentSublist) {
+          currentSublist = document.createElement("ol");
+          currentSublist.className = "post-toc-sublist";
+          currentSection.appendChild(currentSublist);
+        }
+        currentSublist.appendChild(item);
+      } else {
+        list.appendChild(item);
       }
-      currentSublist.appendChild(item);
-    } else {
-      list.appendChild(item);
     }
 
     addPermalink(heading, id, title);
   });
 
-  toc.hidden = false;
+  if (buildToc) toc.hidden = false;
 }());
