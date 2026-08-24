@@ -29,6 +29,13 @@ layout: default
     {{ content }}
   </div>
 </article>
+<aside class="post-outline" aria-label="Article sections" data-post-outline hidden>
+  <div class="post-outline-rail" data-post-outline-rail></div>
+  <nav class="post-outline-panel" aria-label="On this page">
+    <p class="post-outline-title">On this page</p>
+    <ol class="post-outline-list" data-post-outline-list></ol>
+  </nav>
+</aside>
 <script src="{{ '/assets/js/post-toc.js' | relative_url }}" defer></script>
 {% unless page.lightbox == false %}
   <dialog class="image-lightbox" aria-label="Expanded image" data-image-lightbox>

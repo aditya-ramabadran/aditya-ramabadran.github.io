@@ -1,6 +1,9 @@
 (function () {
   var toc = document.querySelector("[data-post-toc]");
   var list = document.querySelector("[data-post-toc-list]");
+  var outline = document.querySelector("[data-post-outline]");
+  var outlineRail = document.querySelector("[data-post-outline-rail]");
+  var outlineList = document.querySelector("[data-post-outline-list]");
   var body = document.querySelector(".post-body");
 
   if (!body) return;
@@ -13,6 +16,7 @@
   var usedIds = {};
   var currentSection = null;
   var currentSublist = null;
+  var sections = [];
 
   function slugify(text) {
     return text
@@ -81,6 +85,78 @@
     heading.insertBefore(permalink, heading.firstChild);
   }
 
+  function buildOutline() {
+    if (!outline || !outlineRail || !outlineList || sections.length < 2) return;
+
+    var outlineItems = [];
+
+    sections.forEach(function (section) {
+      var tick = document.createElement("a");
+      tick.className = "post-outline-tick post-outline-tick--" + section.level;
+      tick.href = "#" + section.id;
+      tick.title = section.title;
+      tick.setAttribute("aria-label", "Go to " + section.title);
+      outlineRail.appendChild(tick);
+
+      var item = document.createElement("li");
+      item.className = "post-outline-item post-outline-item--" + section.level;
+
+      var link = document.createElement("a");
+      link.href = "#" + section.id;
+      link.textContent = section.title;
+      item.appendChild(link);
+      outlineList.appendChild(item);
+
+      outlineItems.push({
+        id: section.id,
+        heading: section.heading,
+        tick: tick,
+        link: link
+      });
+    });
+
+    function updateActiveSection() {
+      var marker = Math.min(240, window.innerHeight * 0.28);
+      var active = outlineItems[0];
+
+      outlineItems.forEach(function (item) {
+        if (item.heading.getBoundingClientRect().top <= marker) active = item;
+      });
+
+      outlineItems.forEach(function (item) {
+        var isActive = item === active;
+        item.tick.classList.toggle("is-active", isActive);
+        item.link.classList.toggle("is-active", isActive);
+
+        if (isActive) {
+          item.tick.setAttribute("aria-current", "location");
+          item.link.setAttribute("aria-current", "location");
+        } else {
+          item.tick.removeAttribute("aria-current");
+          item.link.removeAttribute("aria-current");
+        }
+      });
+    }
+
+    var updateScheduled = false;
+
+    function scheduleUpdate() {
+      if (updateScheduled) return;
+      updateScheduled = true;
+
+      window.requestAnimationFrame(function () {
+        updateActiveSection();
+        updateScheduled = false;
+      });
+    }
+
+    outline.hidden = false;
+    updateActiveSection();
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
+    window.addEventListener("hashchange", scheduleUpdate);
+  }
+
   headings.forEach(function (heading, index) {
     var title = heading.textContent.trim();
     var baseId = heading.id || slugify(title) || "section-" + (index + 1);
@@ -94,6 +170,12 @@
 
     usedIds[id] = true;
     heading.id = id;
+    sections.push({
+      id: id,
+      heading: heading,
+      level: heading.tagName.toLowerCase(),
+      title: title
+    });
 
     if (buildToc) {
       var item = document.createElement("li");
@@ -122,4 +204,5 @@
   });
 
   if (buildToc) toc.hidden = false;
+  buildOutline();
 }());

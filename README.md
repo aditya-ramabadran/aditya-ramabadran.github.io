@@ -30,6 +30,8 @@ Native posts automatically get a table of contents when they contain at least tw
 
 Section headings also get permalink controls that scroll to the section and copy its URL. Hero images and figures open in an in-page expanded view with mouse, touch, or keyboard controls; add `lightbox: false` to disable that behavior for a particular post.
 
+On larger screens, articles with at least two headings also get a compact right-edge outline. It tracks the current section and expands into a clickable section list on hover or keyboard focus; the in-article table of contents remains available at smaller widths.
+
 ## Add a link-only X article
 
 Create the same kind of dated file, but add `external_url` and `external_only: true`. The writing indexes will link the title directly to X instead of opening a local post.
