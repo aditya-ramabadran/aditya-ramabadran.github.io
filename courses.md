@@ -3,7 +3,6 @@ layout: default
 title: Selected courses
 description: Selected mathematics, computer science, AI, probability, statistics, and optimization coursework.
 permalink: /courses/
-sitemap: false
 ---
 
 <header class="courses-header">
