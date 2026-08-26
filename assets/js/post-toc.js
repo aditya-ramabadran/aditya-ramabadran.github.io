@@ -89,6 +89,8 @@
     if (!outline || !outlineRail || !outlineList || sections.length < 2) return;
 
     var outlineItems = [];
+    var outlineSection = null;
+    var outlineSublist = null;
 
     sections.forEach(function (section) {
       var tick = document.createElement("a");
@@ -105,7 +107,21 @@
       link.href = "#" + section.id;
       link.textContent = section.title;
       item.appendChild(link);
-      outlineList.appendChild(item);
+
+      if (section.level === "h2") {
+        outlineList.appendChild(item);
+        outlineSection = item;
+        outlineSublist = null;
+      } else if (outlineSection) {
+        if (!outlineSublist) {
+          outlineSublist = document.createElement("ol");
+          outlineSublist.className = "post-outline-sublist";
+          outlineSection.appendChild(outlineSublist);
+        }
+        outlineSublist.appendChild(item);
+      } else {
+        outlineList.appendChild(item);
+      }
 
       outlineItems.push({
         id: section.id,

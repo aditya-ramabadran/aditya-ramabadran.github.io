@@ -650,12 +650,7 @@ p {
 }
 
 .post-outline {
-  position: fixed;
-  top: 50%;
-  right: 1rem;
-  z-index: 20;
   display: none;
-  transform: translateY(-50%);
 }
 
 .post-outline-rail {
@@ -663,10 +658,7 @@ p {
   flex-direction: column;
   align-items: flex-end;
   gap: 0.16rem;
-  padding: 0.55rem 0.4rem;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  background: var(--background);
+  padding: 0.15rem 0 0.15rem 0.8rem;
 }
 
 .post-outline-tick {
@@ -709,30 +701,10 @@ p {
 }
 
 .post-outline-panel {
-  position: absolute;
-  top: 50%;
-  right: 1.75rem;
-  width: min(18rem, calc(100vw - 4rem));
-  max-height: 78vh;
-  padding: 1rem;
+  min-width: 0;
+  max-height: calc(100vh - 8.5rem);
+  padding-right: 0.25rem;
   overflow-y: auto;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--background);
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.16);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translate(0.45rem, -50%);
-  transition: opacity 140ms ease, transform 140ms ease, visibility 140ms ease;
-}
-
-.post-outline:hover .post-outline-panel,
-.post-outline:focus-within .post-outline-panel {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translate(0, -50%);
 }
 
 .post-outline-title {
@@ -744,22 +716,25 @@ p {
   text-transform: uppercase;
 }
 
-.post-outline-list {
-  list-style: none;
+.post-outline-list,
+.post-outline-sublist {
   margin: 0;
-  padding: 0;
+  padding-left: 1.35rem;
 }
 
-.post-outline-item + .post-outline-item {
+.post-outline-sublist {
+  margin-top: 0.35rem;
+  padding-left: 1.25rem;
+  list-style-type: lower-alpha;
+}
+
+.post-outline-list > .post-outline-item + .post-outline-item,
+.post-outline-sublist > .post-outline-item + .post-outline-item {
   margin-top: 0.38rem;
 }
 
-.post-outline-item--h3 {
-  padding-left: 0.9rem;
-}
-
 .post-outline-item a {
-  display: block;
+  padding-left: 0.08rem;
   color: var(--muted);
   font-size: 0.8rem;
   line-height: 1.35;
@@ -856,9 +831,55 @@ p {
 }
 
 .math-display {
-  overflow-x: auto;
+  position: relative;
   margin: 1.5rem 0;
-  text-align: center;
+}
+
+.math-display-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.35rem 0 0.55rem;
+  cursor: text;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.math-display-scroll > mjx-container[display="true"] {
+  width: max-content;
+  min-width: 100%;
+  margin: 0 !important;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.post-body mjx-container {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.math-copy-button {
+  position: absolute;
+  top: -0.85rem;
+  right: 0;
+  z-index: 1;
+  padding: 0.12rem 0;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: var(--background);
+  color: var(--faint);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+
+.math-copy-button:hover,
+.math-copy-button:focus-visible,
+.math-copy-button.is-copied {
+  border-bottom-color: currentColor;
+  color: var(--accent);
+  outline: none;
 }
 
 .post-body blockquote {
@@ -952,9 +973,47 @@ p {
   }
 }
 
-@media (min-width: 1180px) and (hover: hover) {
+@media (min-width: 1320px) {
+  .has-post-layout .shell {
+    grid-template-columns: 190px minmax(0, 960px);
+    gap: clamp(3rem, 6vw, 5rem);
+    width: min(calc(100% - 3rem), 1230px);
+  }
+
+  .content--post {
+    display: grid;
+    grid-template-columns: minmax(0, 620px) minmax(220px, 1fr);
+    column-gap: clamp(2.5rem, 4vw, 4rem);
+    align-items: start;
+  }
+
+  .content--post .post {
+    grid-column: 1;
+  }
+
+  .content--post .post-toc {
+    display: none;
+  }
+
   .post-outline:not([hidden]) {
-    display: block;
+    position: sticky;
+    top: 4.25rem;
+    z-index: 10;
+    display: grid;
+    grid-column: 2;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-self: start;
+    max-height: calc(100vh - 8.5rem);
+  }
+
+  .post-outline-panel {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .post-outline-rail {
+    grid-column: 2;
+    grid-row: 1;
   }
 }
 
@@ -1015,7 +1074,6 @@ p {
     transition: none;
   }
 
-  .post-outline-panel,
   .post-outline-tick::before {
     transition: none;
   }
@@ -1027,6 +1085,10 @@ p {
   .post-outline,
   .site-footer {
     display: none;
+  }
+
+  .has-post-layout .post-toc {
+    display: block;
   }
 
   body {
