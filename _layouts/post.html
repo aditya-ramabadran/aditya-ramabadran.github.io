@@ -36,7 +36,7 @@ layout: default
     <ol class="post-outline-list" data-post-outline-list></ol>
   </nav>
 </aside>
-<script src="{{ '/assets/js/post-toc.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/post-toc.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 {% if page.math %}
   <script>
     (function () {
@@ -57,7 +57,7 @@ layout: default
       });
     }());
   </script>
-  <script src="{{ '/assets/js/post-math.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/post-math.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 {% endif %}
 {% unless page.lightbox == false %}
   <dialog class="image-lightbox" aria-label="Expanded image" data-image-lightbox>
@@ -67,5 +67,5 @@ layout: default
       <p class="image-lightbox-caption" data-image-lightbox-caption hidden></p>
     </div>
   </dialog>
-  <script src="{{ '/assets/js/post-lightbox.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/post-lightbox.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 {% endunless %}
