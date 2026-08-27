@@ -5,6 +5,8 @@ browser_title: "Aditya Ramabadran | About Me"
 description: Machine learning research engineer with a background in mathematics and computer science.
 ---
 
+<div class="home-columns">
+<div class="home-main">
 <section class="intro">
   <p>I am a Member of Technical Staff at <a href="https://axiommath.ai/">Axiom Math</a>, where I work on post-training for formal mathematical reasoning agents.</p>
   <p>Previously, I studied mathematics and computer science at UC Berkeley. There, I worked on robotics and reinforcement learning research as well as mathematical research in harmonic analysis and PDE.</p>
@@ -70,9 +72,13 @@ description: Machine learning research engineer with a background in mathematics
     </div>
   </div>
 </div>
+</div>
 
-## Writing
+<aside class="home-writing" aria-label="Writing preview">
+<h2>Writing</h2>
 
 {% include post-list.html limit=3 %}
 
 <p class="writing-all"><a href="{{ '/writing/' | relative_url }}">View all writing <span aria-hidden="true">→</span></a></p>
+</aside>
+</div>

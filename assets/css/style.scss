@@ -973,7 +973,59 @@ p {
   }
 }
 
+@media (min-width: 1180px) {
+  .has-home-layout .shell {
+    grid-template-columns: 190px minmax(0, 894px);
+    gap: 3rem;
+    width: min(calc(100% - 3rem), 1132px);
+  }
+
+  .home-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 620px) minmax(220px, 1fr);
+    column-gap: clamp(2rem, 3vw, 3rem);
+    align-items: start;
+  }
+
+  .home-writing {
+    position: sticky;
+    top: 4.25rem;
+    align-self: start;
+  }
+
+  .home-writing h2 {
+    margin: 0;
+    padding: 0 0 0.75rem;
+    font-size: 1rem;
+  }
+
+  .home-writing .post-list-item {
+    display: block;
+    padding: 0.85rem 0;
+  }
+
+  .home-writing .post-list-meta {
+    flex-direction: row;
+    gap: 0.55rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .home-writing .post-list-item h3 {
+    font-size: 0.96rem;
+  }
+
+  .home-writing .post-list-item p {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .home-writing .writing-all {
+    margin-top: 0.9rem;
+  }
+}
+
 @media (min-width: 1320px) {
+  .has-home-layout .shell,
   .has-post-layout .shell {
     grid-template-columns: 190px minmax(0, 960px);
     gap: clamp(3rem, 6vw, 5rem);
