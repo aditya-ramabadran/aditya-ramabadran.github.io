@@ -6,12 +6,12 @@ format: Article + X
 description: "An investigation of how GPT reasoning-effort settings map to hidden juice values, affect prompt caching, and may be learned during post-training."
 external_url: "https://x.com/a_ramabadran/status/2090841929621885084"
 hero_image: "/assets/images/writing/juice-numbers/hero.jpg"
-hero_alt: "What does Juice 48 actually do? Reverse-engineering GPT reasoning effort."
+hero_alt: "Reverse-engineering GPT reasoning effort: what juice values actually do, and how user text can override the effort setting."
 image:
   path: "/assets/images/writing/juice-numbers/hero.jpg"
   width: 2000
   height: 800
-  alt: "What does Juice 48 actually do? Reverse-engineering GPT reasoning effort."
+  alt: "Reverse-engineering GPT reasoning effort: what juice values actually do, and how user text can override the effort setting."
 math: true
 toc: true
 ---
