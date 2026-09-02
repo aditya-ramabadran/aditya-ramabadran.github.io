@@ -2,11 +2,60 @@
   var toc = document.querySelector("[data-post-toc]");
   var list = document.querySelector("[data-post-toc-list]");
   var outline = document.querySelector("[data-post-outline]");
-  var outlineRail = document.querySelector("[data-post-outline-rail]");
   var outlineList = document.querySelector("[data-post-outline-list]");
+  var progressBar = document.querySelector("[data-reading-progress-bar]");
+  var backToTop = document.querySelector("[data-back-to-top]");
   var body = document.querySelector(".post-body");
 
   if (!body) return;
+
+  function setupReadingTools() {
+    if (!progressBar && !backToTop) return;
+
+    var updateScheduled = false;
+
+    function updateReadingTools() {
+      var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+      var scrollHeight = Math.max(
+        document.documentElement.scrollHeight,
+        document.body.scrollHeight
+      );
+      var scrollableHeight = Math.max(scrollHeight - window.innerHeight, 0);
+      var progress = scrollableHeight ? Math.min(Math.max(scrollTop / scrollableHeight, 0), 1) : 0;
+
+      if (progressBar) progressBar.style.transform = "scaleX(" + progress + ")";
+
+      if (backToTop) {
+        var isVisible = scrollTop > 320;
+        backToTop.classList.toggle("is-visible", isVisible);
+        backToTop.setAttribute("aria-hidden", isVisible ? "false" : "true");
+        backToTop.tabIndex = isVisible ? 0 : -1;
+      }
+
+      updateScheduled = false;
+    }
+
+    function scheduleUpdate() {
+      if (updateScheduled) return;
+      updateScheduled = true;
+      window.requestAnimationFrame(updateReadingTools);
+    }
+
+    if (backToTop) {
+      backToTop.tabIndex = -1;
+      backToTop.addEventListener("click", function () {
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+      });
+    }
+
+    updateReadingTools();
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
+    window.addEventListener("load", scheduleUpdate);
+  }
+
+  setupReadingTools();
 
   var headings = Array.prototype.slice.call(body.querySelectorAll("h2, h3"));
   if (!headings.length) return;
@@ -86,20 +135,13 @@
   }
 
   function buildOutline() {
-    if (!outline || !outlineRail || !outlineList || sections.length < 2) return;
+    if (!outline || !outlineList || sections.length < 2) return;
 
     var outlineItems = [];
     var outlineSection = null;
     var outlineSublist = null;
 
     sections.forEach(function (section) {
-      var tick = document.createElement("a");
-      tick.className = "post-outline-tick post-outline-tick--" + section.level;
-      tick.href = "#" + section.id;
-      tick.title = section.title;
-      tick.setAttribute("aria-label", "Go to " + section.title);
-      outlineRail.appendChild(tick);
-
       var item = document.createElement("li");
       item.className = "post-outline-item post-outline-item--" + section.level;
 
@@ -126,7 +168,6 @@
       outlineItems.push({
         id: section.id,
         heading: section.heading,
-        tick: tick,
         link: link
       });
     });
@@ -141,14 +182,11 @@
 
       outlineItems.forEach(function (item) {
         var isActive = item === active;
-        item.tick.classList.toggle("is-active", isActive);
         item.link.classList.toggle("is-active", isActive);
 
         if (isActive) {
-          item.tick.setAttribute("aria-current", "location");
           item.link.setAttribute("aria-current", "location");
         } else {
-          item.tick.removeAttribute("aria-current");
           item.link.removeAttribute("aria-current");
         }
       });

@@ -2,6 +2,9 @@
 layout: default
 ---
 
+<div class="reading-progress" aria-hidden="true">
+  <span class="reading-progress-bar" data-reading-progress-bar></span>
+</div>
 <article class="post">
   <a class="back-link" href="{{ '/writing/' | relative_url }}">← All writing</a>
   <header class="post-header">
@@ -30,12 +33,16 @@ layout: default
   </div>
 </article>
 <aside class="post-outline" aria-label="Article sections" data-post-outline hidden>
-  <div class="post-outline-rail" data-post-outline-rail></div>
   <nav class="post-outline-panel" aria-label="On this page">
     <p class="post-outline-title">On this page</p>
     <ol class="post-outline-list" data-post-outline-list></ol>
   </nav>
 </aside>
+<button class="back-to-top" type="button" aria-label="Back to top" aria-hidden="true" data-back-to-top>
+  <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+    <path d="M4.5 8.5 10 3l5.5 5.5M10 3.5V17"></path>
+  </svg>
+</button>
 <script src="{{ '/assets/js/post-toc.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 {% if page.math %}
   <script>
