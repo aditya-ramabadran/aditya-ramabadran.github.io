@@ -39,14 +39,26 @@ layout: default
       <div class="fun-photo-showcase">
         {% for photo in event.group_photos %}
           <figure class="fun-showcase-photo">
-            <img
-              src="{{ photo.src | relative_url }}"
-              alt="{{ photo.alt }}"
-              width="{{ photo.width }}"
-              height="{{ photo.height }}"
-              loading="lazy"
-              decoding="async"
+            <button
+              class="fun-showcase-preview"
+              type="button"
+              aria-label="Open larger view: {{ photo.alt | escape }}"
+              aria-haspopup="dialog"
+              data-fun-media-open
+              data-media-kind="image"
+              data-media-src="{{ photo.src | relative_url }}"
+              data-media-alt="{{ photo.alt | escape }}"
+              data-media-caption="{{ photo.caption | escape }}"
             >
+              <img
+                src="{{ photo.src | relative_url }}"
+                alt=""
+                width="{{ photo.width }}"
+                height="{{ photo.height }}"
+                loading="lazy"
+                decoding="async"
+              >
+            </button>
             {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
           </figure>
         {% endfor %}

@@ -1090,7 +1090,7 @@ html[data-theme="dark"] .fun-event {
 
 .fun-photo-showcase {
   display: grid;
-  grid-auto-columns: min(82%, 44rem);
+  grid-auto-columns: clamp(12rem, 29vw, 16rem);
   grid-auto-flow: column;
   gap: 1rem;
   overflow-x: auto;
@@ -1105,12 +1105,31 @@ html[data-theme="dark"] .fun-event {
   scroll-snap-align: start;
 }
 
-.fun-showcase-photo img {
+.fun-showcase-preview {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: #0d0d0d;
+  cursor: zoom-in;
+}
+
+.fun-showcase-preview:hover {
+  border-color: var(--text);
+}
+
+.fun-showcase-preview:focus-visible {
+  border-color: var(--text);
+  outline: 2px solid var(--fun-accent);
+  outline-offset: 3px;
+}
+
+.fun-showcase-preview img {
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid var(--border);
-  border-radius: 3px;
 }
 
 .fun-setlist-section {
@@ -1408,9 +1427,6 @@ html[data-theme="dark"] .fun-event {
     width: min(100%, 24rem);
   }
 
-  .fun-photo-showcase {
-    grid-auto-columns: 91%;
-  }
 }
 
 @media (min-width: 1040px) {
