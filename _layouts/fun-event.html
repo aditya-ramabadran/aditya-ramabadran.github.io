@@ -63,8 +63,21 @@ layout: default
 
     <ol class="fun-setlist">
       {% for song in event.setlist %}
+        {% assign album = event.albums[song.album] %}
         <li class="fun-setlist-item{% if song.media %} has-media{% endif %}">
           <div class="fun-track">
+            {% if album %}
+              <img
+                class="fun-album-cover"
+                src="{{ album.cover | relative_url }}"
+                alt="{% if album.alt %}{{ album.alt }}{% else %}{{ album.title }} album cover{% endif %}"
+                title="{{ album.title | escape }} · {{ album.artist | escape }}"
+                width="240"
+                height="240"
+                loading="lazy"
+                decoding="async"
+              >
+            {% endif %}
             <h3>{{ song.title }}</h3>
             {% if song.note %}<p>{{ song.note }}</p>{% endif %}
           </div>

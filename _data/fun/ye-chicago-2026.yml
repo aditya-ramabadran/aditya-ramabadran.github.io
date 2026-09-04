@@ -6,6 +6,93 @@ location: Chicago
 description: A few photos and videos from the first night at Soldier Field, alongside the full setlist.
 setlist_source: https://x.com/nfr_podcast/status/2095727090247032903
 
+albums:
+  graduation:
+    title: Graduation
+    artist: Kanye West
+    cover: /assets/images/fun/ye-chicago-2026/albums/graduation.webp
+  life-of-pablo:
+    title: The Life of Pablo
+    artist: Kanye West
+    cover: /assets/images/fun/ye-chicago-2026/albums/life-of-pablo.webp
+  watch-the-throne:
+    title: Watch the Throne
+    artist: JAY-Z & Kanye West
+    cover: /assets/images/fun/ye-chicago-2026/albums/watch-the-throne.webp
+  donda:
+    title: Donda
+    artist: Kanye West
+    cover: /assets/images/fun/ye-chicago-2026/albums/donda.webp
+  yeezus:
+    title: Yeezus
+    artist: Kanye West
+    cover: /assets/images/fun/ye-chicago-2026/albums/yeezus.webp
+  vultures-1:
+    title: VULTURES 1
+    artist: ¥$, Kanye West & Ty Dolla $ign
+    cover: /assets/images/fun/ye-chicago-2026/albums/vultures-1.webp
+  mbdtf:
+    title: My Beautiful Dark Twisted Fantasy
+    artist: Kanye West
+    cover: /assets/images/fun/ye-chicago-2026/albums/mbdtf.webp
+  808s-and-heartbreak:
+    title: 808s & Heartbreak
+    artist: Kanye West
+    cover: /assets/images/fun/ye-chicago-2026/albums/808s-and-heartbreak.webp
+  bully:
+    title: BULLY
+    artist: Kanye West
+    cover: /assets/images/fun/ye-chicago-2026/albums/bully.webp
+  unreleased-vultures:
+    title: Unreleased · Vultures era
+    artist: ¥$
+    cover: /assets/images/fun/ye-chicago-2026/albums/unreleased-vultures.svg
+    alt: Unreleased Vultures-era track artwork
+  blueprint-3:
+    title: The Blueprint 3
+    artist: JAY-Z
+    cover: /assets/images/fun/ye-chicago-2026/albums/blueprint-3.webp
+  cruel-summer:
+    title: Kanye West Presents Good Music Cruel Summer
+    artist: Various Artists
+    cover: /assets/images/fun/ye-chicago-2026/albums/cruel-summer.webp
+  dark-sky-paradise:
+    title: Dark Sky Paradise
+    artist: Big Sean
+    cover: /assets/images/fun/ye-chicago-2026/albums/dark-sky-paradise.webp
+  based-on-a-tru-story:
+    title: Based On a T.R.U. Story
+    artist: 2 Chainz
+    cover: /assets/images/fun/ye-chicago-2026/albums/based-on-a-tru-story.webp
+  i-never-liked-you:
+    title: I NEVER LIKED YOU
+    artist: Future
+    cover: /assets/images/fun/ye-chicago-2026/albums/i-never-liked-you.webp
+  ds2-deluxe:
+    title: DS2 (Deluxe)
+    artist: Future
+    cover: /assets/images/fun/ye-chicago-2026/albums/ds2-deluxe.webp
+  shine:
+    title: Shine
+    artist: Estelle
+    cover: /assets/images/fun/ye-chicago-2026/albums/shine.webp
+  kamikaze:
+    title: Kamikaze
+    artist: Twista
+    cover: /assets/images/fun/ye-chicago-2026/albums/kamikaze.webp
+  college-dropout:
+    title: The College Dropout
+    artist: Kanye West
+    cover: /assets/images/fun/ye-chicago-2026/albums/college-dropout.webp
+  late-registration:
+    title: Late Registration
+    artist: Kanye West
+    cover: /assets/images/fun/ye-chicago-2026/albums/late-registration.webp
+  ye:
+    title: ye
+    artist: Kanye West
+    cover: /assets/images/fun/ye-chicago-2026/albums/ye.webp
+
 hero:
   src: /assets/images/fun/ye-chicago-2026/hero.webp
   alt: Ye standing alone above the black-and-white Earth stage at Soldier Field
@@ -26,6 +113,7 @@ group_photos:
 
 setlist:
   - title: Homecoming
+    album: graduation
     note: Played twice
     media:
       - kind: video
@@ -36,7 +124,9 @@ setlist:
         width: 720
         height: 1280
   - title: Father Stretch My Hands, Pt. 1
+    album: life-of-pablo
   - title: Can’t Tell Me Nothing
+    album: graduation
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/cant-tell-me-nothing.mp4
@@ -51,14 +141,23 @@ setlist:
         width: 1650
         height: 2200
   - title: N——s in Paris
+    album: watch-the-throne
   - title: No Church in the Wild
+    album: watch-the-throne
   - title: Off the Grid
+    album: donda
   - title: Praise God
+    album: donda
   - title: Black Skinhead
+    album: yeezus
   - title: On Sight
+    album: yeezus
   - title: Blood on the Leaves
+    album: yeezus
   - title: Carnival
+    album: vultures-1
   - title: Power
+    album: mbdtf
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/power.mp4
@@ -68,7 +167,9 @@ setlist:
         width: 720
         height: 1280
   - title: Fade
+    album: life-of-pablo
   - title: Love Lockdown
+    album: 808s-and-heartbreak
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/love-lockdown.mp4
@@ -78,7 +179,9 @@ setlist:
         width: 720
         height: 1280
   - title: Bound 2
+    album: yeezus
   - title: I Wonder
+    album: graduation
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/i-wonder.mp4
@@ -88,8 +191,11 @@ setlist:
         width: 960
         height: 1280
   - title: Champion
+    album: graduation
   - title: Heard ’Em Say
+    album: late-registration
   - title: Say You Will
+    album: 808s-and-heartbreak
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/say-you-will.mp4
@@ -99,6 +205,7 @@ setlist:
         width: 720
         height: 1280
   - title: Heartless
+    album: 808s-and-heartbreak
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/heartless.mp4
@@ -108,7 +215,9 @@ setlist:
         width: 720
         height: 1280
   - title: King
+    album: bully
   - title: Father
+    album: bully
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/father.mp4
@@ -118,8 +227,11 @@ setlist:
         width: 720
         height: 1280
   - title: All the Love
+    album: bully
   - title: I Can’t Wait
+    album: bully
   - title: Everybody
+    album: unreleased-vultures
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/everybody.mp4
@@ -129,8 +241,11 @@ setlist:
         width: 720
         height: 1280
   - title: Famous
+    album: life-of-pablo
   - title: Run This Town
+    album: blueprint-3
   - title: Clique
+    album: cruel-summer
     note: with Big Sean
     media:
       - kind: video
@@ -146,6 +261,7 @@ setlist:
         width: 1650
         height: 2200
   - title: IDFWU
+    album: dark-sky-paradise
     note: with Big Sean
     media:
       - kind: video
@@ -156,6 +272,7 @@ setlist:
         width: 720
         height: 1280
   - title: Mercy
+    album: cruel-summer
     note: with 2 Chainz and Big Sean
     media:
       - kind: video
@@ -166,6 +283,7 @@ setlist:
         width: 720
         height: 1280
   - title: Birthday Song
+    album: based-on-a-tru-story
     note: with 2 Chainz
     media:
       - kind: video
@@ -176,6 +294,7 @@ setlist:
         width: 720
         height: 1280
   - title: Keep It Burnin
+    album: i-never-liked-you
     note: with Future
     media:
       - kind: video
@@ -186,8 +305,10 @@ setlist:
         width: 720
         height: 1280
   - title: F—k Up Some Commas
+    album: ds2-deluxe
     note: by Future
   - title: American Boy
+    album: shine
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/american-boy.mp4
@@ -197,6 +318,7 @@ setlist:
         width: 720
         height: 1280
   - title: Good Life
+    album: graduation
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/good-life.mp4
@@ -206,6 +328,7 @@ setlist:
         width: 720
         height: 1280
   - title: Overnight Celebrity
+    album: kamikaze
     note: with Twista
     media:
       - kind: video
@@ -216,6 +339,7 @@ setlist:
         width: 720
         height: 1280
   - title: Slow Jamz
+    album: college-dropout
     note: with Twista
     media:
       - kind: video
@@ -226,7 +350,9 @@ setlist:
         width: 720
         height: 1280
   - title: All Falls Down
+    album: college-dropout
   - title: Jesus Walks
+    album: college-dropout
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/jesus-walks.mp4
@@ -236,6 +362,7 @@ setlist:
         width: 720
         height: 1280
   - title: Through the Wire
+    album: college-dropout
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/through-the-wire.mp4
@@ -245,6 +372,7 @@ setlist:
         width: 720
         height: 1280
   - title: Gold Digger
+    album: late-registration
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/gold-digger.mp4
@@ -254,6 +382,7 @@ setlist:
         width: 720
         height: 1280
   - title: All of the Lights
+    album: mbdtf
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/all-of-the-lights.mp4
@@ -263,8 +392,11 @@ setlist:
         width: 720
         height: 1280
   - title: Flashing Lights
+    album: graduation
   - title: Stronger
+    album: graduation
   - title: Ghost Town
+    album: ye
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/ghost-town.mp4
@@ -274,6 +406,7 @@ setlist:
         width: 720
         height: 1280
   - title: Runaway
+    album: mbdtf
     media:
       - kind: video
         src: /assets/videos/fun/ye-chicago-2026/runaway.mp4

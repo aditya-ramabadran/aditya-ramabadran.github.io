@@ -1183,7 +1183,17 @@ html[data-theme="dark"] .fun-event {
   display: flex;
   flex-wrap: wrap;
   gap: 0.2rem 0.75rem;
-  align-items: baseline;
+  align-items: center;
+}
+
+.fun-album-cover {
+  width: 1.8rem;
+  height: 1.8rem;
+  flex: 0 0 1.8rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: #0d0d0d;
+  object-fit: cover;
 }
 
 .fun-track h3 {
