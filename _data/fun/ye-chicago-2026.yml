@@ -1,0 +1,157 @@
+title: Ye in Chicago
+date: 2026-09-03
+date_display: September 3, 2026
+venue: Soldier Field
+location: Chicago
+description: A few photos and videos from the first night at Soldier Field, alongside the full setlist.
+setlist_source: https://x.com/nfr_podcast/status/2095727090247032903
+
+hero:
+  src: /assets/images/fun/ye-chicago-2026/hero.webp
+  alt: Ye standing alone above the black-and-white Earth stage at Soldier Field
+  width: 1800
+  height: 2400
+
+group_photos:
+  - src: /assets/images/fun/ye-chicago-2026/group-before.webp
+    alt: Five friends standing outside Soldier Field under beams of light
+    width: 1800
+    height: 1350
+    caption: Outside Soldier Field.
+  - src: /assets/images/fun/ye-chicago-2026/group-after.webp
+    alt: Four friends in the crowd with Ye performing on the Earth stage behind them
+    width: 1800
+    height: 1350
+    caption: End of the night.
+
+setlist:
+  - title: Homecoming
+    note: Played twice
+  - title: Father Stretch My Hands, Pt. 1
+  - title: Can’t Tell Me Nothing
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/cant-tell-me-nothing.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/cant-tell-me-nothing.webp
+        alt: Short video of Ye performing Can’t Tell Me Nothing on the blue Earth stage
+        caption: Can’t Tell Me Nothing
+        width: 960
+        height: 1280
+      - kind: image
+        src: /assets/images/fun/ye-chicago-2026/blue-earth.webp
+        alt: Ye standing above a bright blue projection of Earth
+        width: 1650
+        height: 2200
+  - title: N——s in Paris
+  - title: No Church in the Wild
+  - title: Off the Grid
+  - title: Praise God
+  - title: Black Skinhead
+  - title: On Sight
+  - title: Blood on the Leaves
+  - title: Carnival
+  - title: Power
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/power.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/power.webp
+        alt: Video of Power with white beams opening above the Earth stage
+        caption: Power
+        width: 720
+        height: 1280
+  - title: Fade
+  - title: Love Lockdown
+  - title: Bound 2
+  - title: I Wonder
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/i-wonder.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/i-wonder.webp
+        alt: Video of Ye performing I Wonder under red light on the Earth stage
+        caption: I Wonder
+        width: 960
+        height: 1280
+  - title: Champion
+  - title: Heard ’Em Say
+  - title: Say You Will
+  - title: Heartless
+  - title: King
+  - title: Father
+  - title: All the Love
+  - title: I Can’t Wait
+  - title: Everybody
+  - title: Famous
+  - title: Run This Town
+  - title: Clique
+    note: with Big Sean
+    media:
+      - kind: image
+        src: /assets/images/fun/ye-chicago-2026/guest-red.webp
+        alt: Two performers on the Earth stage under red light and vertical white beams
+        width: 1650
+        height: 2200
+  - title: IDFWU
+    note: with Big Sean
+  - title: Mercy
+    note: with 2 Chainz and Big Sean
+  - title: Birthday Song
+    note: with 2 Chainz
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/birthday-song.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/birthday-song.webp
+        alt: Video of Ye and 2 Chainz performing Birthday Song
+        caption: Birthday Song with 2 Chainz
+        width: 720
+        height: 1280
+  - title: Keep It Burnin
+    note: with Future
+  - title: F—k Up Some Commas
+    note: by Future
+  - title: American Boy
+  - title: Good Life
+  - title: Overnight Celebrity
+    note: with Twista
+  - title: Slow Jamz
+    note: with Twista
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/slow-jamz.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/slow-jamz.webp
+        alt: Video of Ye and Twista performing Slow Jamz
+        caption: Slow Jamz with Twista
+        width: 720
+        height: 1280
+  - title: All Falls Down
+  - title: Jesus Walks
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/jesus-walks.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/jesus-walks.webp
+        alt: Video of Jesus Walks beneath a curtain of white light
+        caption: Jesus Walks
+        width: 720
+        height: 1280
+  - title: Through the Wire
+  - title: Gold Digger
+  - title: All of the Lights
+  - title: Flashing Lights
+  - title: Stronger
+  - title: Ghost Town
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/ghost-town.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/ghost-town.webp
+        alt: Video of Ye alone in white during Ghost Town
+        caption: Ghost Town
+        width: 720
+        height: 1280
+  - title: Runaway
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/runaway.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/runaway.webp
+        alt: Video of Ye seated at the piano during Runaway
+        caption: Runaway
+        width: 720
+        height: 1280

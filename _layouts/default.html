@@ -18,6 +18,9 @@
     {% else %}
       {% seo %}
     {% endif %}
+    {% if page.unlisted %}
+      <meta name="robots" content="noindex, nofollow, noarchive">
+    {% endif %}
     <link rel="icon" type="image/png" sizes="48x48" href="{{ '/assets/images/favicon-48x48.png' | relative_url }}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/images/favicon-192x192.png' | relative_url }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
@@ -35,9 +38,10 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     {% feed_meta %}
   </head>
-  <body{% if page.layout == 'post' %} class="has-post-layout"{% elsif page.url == '/' %} class="has-home-layout"{% endif %}>
+  <body class="{% if page.layout == 'post' %}has-post-layout{% elsif page.url == '/' %}has-home-layout{% endif %}{% if page.body_class %} {{ page.body_class }}{% endif %}">
     <a class="skip-link" href="#content">Skip to content</a>
-    <div class="shell">
+    <div class="shell{% if page.hide_sidebar %} shell--no-sidebar{% endif %}">
+      {% unless page.hide_sidebar %}
       <header class="sidebar">
         <div class="profile-photo">
           <img src="{{ '/assets/images/aditya-profile.png' | relative_url }}" alt="Aditya Ramabadran">
@@ -73,6 +77,7 @@
           <span data-theme-label>Dark mode</span>
         </button>
       </header>
+      {% endunless %}
 
       <main id="content" class="content{% if page.layout == 'post' %} content--post{% elsif page.url == '/' %} content--home{% endif %}">
         {{ content }}

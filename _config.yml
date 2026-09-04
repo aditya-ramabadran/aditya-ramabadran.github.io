@@ -27,6 +27,12 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      path: "fun"
+    values:
+      sitemap: false
+      unlisted: true
+      hide_sidebar: true
 
 exclude:
   - Gemfile

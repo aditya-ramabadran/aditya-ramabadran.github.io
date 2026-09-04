@@ -1,0 +1,115 @@
+---
+layout: default
+---
+
+{% assign event = site.data.fun[page.event] %}
+
+<article class="fun-event">
+  <a class="back-link" href="{{ '/fun/' | relative_url }}">← Fun</a>
+
+  <div class="fun-hero-grid">
+    <header class="fun-event-header">
+      <p class="eyebrow">Personal archive</p>
+      <h1>{{ event.title }}</h1>
+      <p class="fun-event-meta">
+        <time datetime="{{ event.date }}">{{ event.date_display }}</time><br>
+        {{ event.venue }} · {{ event.location }}
+      </p>
+      <p class="fun-event-deck">{{ event.description }}</p>
+    </header>
+
+    <figure class="fun-hero">
+      <img
+        src="{{ event.hero.src | relative_url }}"
+        alt="{{ event.hero.alt }}"
+        width="{{ event.hero.width }}"
+        height="{{ event.hero.height }}"
+        fetchpriority="high"
+      >
+      {% if event.hero.caption %}<figcaption>{{ event.hero.caption }}</figcaption>{% endif %}
+    </figure>
+  </div>
+
+  {% if event.group_photos %}
+    <section class="fun-photo-section" aria-labelledby="photos-title">
+      <header class="fun-photo-heading">
+        <p class="eyebrow">From the night</p>
+        <h2 id="photos-title">With the crew</h2>
+      </header>
+      <div class="fun-photo-showcase">
+        {% for photo in event.group_photos %}
+          <figure class="fun-showcase-photo">
+            <img
+              src="{{ photo.src | relative_url }}"
+              alt="{{ photo.alt }}"
+              width="{{ photo.width }}"
+              height="{{ photo.height }}"
+              loading="lazy"
+              decoding="async"
+            >
+            {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
+          </figure>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <section class="fun-setlist-section" aria-labelledby="setlist-title">
+    <header class="fun-section-heading">
+      <p class="eyebrow">Night one</p>
+      <h2 id="setlist-title">Setlist</h2>
+      <p>46 songs, with a few moments from the night.</p>
+    </header>
+
+    <ol class="fun-setlist">
+      {% for song in event.setlist %}
+        <li class="fun-setlist-item{% if song.media %} has-media{% endif %}">
+          <div class="fun-track">
+            <h3>{{ song.title }}</h3>
+            {% if song.note %}<p>{{ song.note }}</p>{% endif %}
+          </div>
+
+          {% if song.media %}
+            <div class="fun-track-media{% if song.media.size > 1 %} fun-track-media--grid{% endif %}">
+              {% for media in song.media %}
+                {% if media.kind == 'video' %}
+                  <figure class="fun-media fun-media--video">
+                    <video
+                      controls
+                      playsinline
+                      preload="none"
+                      poster="{{ media.poster | relative_url }}"
+                      width="{{ media.width }}"
+                      height="{{ media.height }}"
+                      aria-label="{{ media.alt | escape }}"
+                    >
+                      <source src="{{ media.src | relative_url }}" type="video/mp4">
+                      <p>Your browser cannot play this video. <a href="{{ media.src | relative_url }}">Open it directly.</a></p>
+                    </video>
+                    {% if media.caption %}<figcaption>{{ media.caption }}</figcaption>{% endif %}
+                  </figure>
+                {% elsif media.kind == 'image' %}
+                  <figure class="fun-media fun-media--image">
+                    <img
+                      src="{{ media.src | relative_url }}"
+                      alt="{{ media.alt }}"
+                      width="{{ media.width }}"
+                      height="{{ media.height }}"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                    {% if media.caption %}<figcaption>{{ media.caption }}</figcaption>{% endif %}
+                  </figure>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <p class="fun-source">
+    Setlist based on <a href="{{ event.setlist_source }}">NFR Podcast’s night-one post</a>; Homecoming is corrected here to two performances.
+  </p>
+</article>
