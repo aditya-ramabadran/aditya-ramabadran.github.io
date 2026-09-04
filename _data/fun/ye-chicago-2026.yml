@@ -27,6 +27,14 @@ group_photos:
 setlist:
   - title: Homecoming
     note: Played twice
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/homecoming-walkout.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/homecoming-walkout.webp
+        alt: Video of Ye walking through the crowd as Homecoming begins
+        caption: Ye walking out to Homecoming
+        width: 720
+        height: 1280
   - title: Father Stretch My Hands, Pt. 1
   - title: Can’t Tell Me Nothing
     media:
@@ -61,6 +69,14 @@ setlist:
         height: 1280
   - title: Fade
   - title: Love Lockdown
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/love-lockdown.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/love-lockdown.webp
+        alt: Video of Ye performing Love Lockdown beneath a red beam
+        caption: Love Lockdown
+        width: 720
+        height: 1280
   - title: Bound 2
   - title: I Wonder
     media:
@@ -74,17 +90,56 @@ setlist:
   - title: Champion
   - title: Heard ’Em Say
   - title: Say You Will
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/say-you-will.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/say-you-will.webp
+        alt: Video of Ye appearing through the smoke during Say You Will
+        caption: Say You Will
+        width: 720
+        height: 1280
   - title: Heartless
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/heartless.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/heartless.webp
+        alt: Video of the Chicago callouts and first chorus of Heartless
+        caption: Heartless
+        width: 720
+        height: 1280
   - title: King
   - title: Father
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/father.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/father.webp
+        alt: Video of the gospel refrain leading into Ye’s verse on Father
+        caption: Father
+        width: 720
+        height: 1280
   - title: All the Love
   - title: I Can’t Wait
   - title: Everybody
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/everybody.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/everybody.webp
+        alt: Video of the crowd joining the hook of Everybody
+        caption: Everybody
+        width: 720
+        height: 1280
   - title: Famous
   - title: Run This Town
   - title: Clique
     note: with Big Sean
     media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/clique.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/clique.webp
+        alt: Video of Ye and Big Sean performing the Clique hook
+        caption: Clique with Big Sean
+        width: 720
+        height: 1280
       - kind: image
         src: /assets/images/fun/ye-chicago-2026/guest-red.webp
         alt: Two performers on the Earth stage under red light and vertical white beams
@@ -92,8 +147,24 @@ setlist:
         height: 2200
   - title: IDFWU
     note: with Big Sean
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/idfwu.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/idfwu.webp
+        alt: Video of Big Sean performing IDFWU under red and white lights
+        caption: IDFWU with Big Sean
+        width: 720
+        height: 1280
   - title: Mercy
     note: with 2 Chainz and Big Sean
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/mercy.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/mercy.webp
+        alt: Video of the guest performance of Mercy
+        caption: Mercy with 2 Chainz and Big Sean
+        width: 720
+        height: 1280
   - title: Birthday Song
     note: with 2 Chainz
     media:
@@ -106,12 +177,44 @@ setlist:
         height: 1280
   - title: Keep It Burnin
     note: with Future
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/keep-it-burnin.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/keep-it-burnin.webp
+        alt: Video of Keep It Burnin with Ye and Future under red light
+        caption: Keep It Burnin with Future
+        width: 720
+        height: 1280
   - title: F—k Up Some Commas
     note: by Future
   - title: American Boy
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/american-boy.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/american-boy.webp
+        alt: Video of Ye performing his verse on American Boy
+        caption: American Boy
+        width: 720
+        height: 1280
   - title: Good Life
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/good-life.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/good-life.webp
+        alt: Video of Ye performing Good Life over the blue Earth stage
+        caption: Good Life
+        width: 720
+        height: 1280
   - title: Overnight Celebrity
     note: with Twista
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/overnight-celebrity.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/overnight-celebrity.webp
+        alt: Video of Twista performing Overnight Celebrity with Ye
+        caption: Overnight Celebrity with Twista
+        width: 720
+        height: 1280
   - title: Slow Jamz
     note: with Twista
     media:
@@ -133,8 +236,32 @@ setlist:
         width: 720
         height: 1280
   - title: Through the Wire
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/through-the-wire.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/through-the-wire.webp
+        alt: Video of Through the Wire over the black-and-white Earth stage
+        caption: Through the Wire
+        width: 720
+        height: 1280
   - title: Gold Digger
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/gold-digger.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/gold-digger.webp
+        alt: Video of Ye performing Gold Digger on the Earth stage
+        caption: Gold Digger
+        width: 720
+        height: 1280
   - title: All of the Lights
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/all-of-the-lights.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/all-of-the-lights.webp
+        alt: Video of fireworks and lasers during All of the Lights
+        caption: All of the Lights
+        width: 720
+        height: 1280
   - title: Flashing Lights
   - title: Stronger
   - title: Ghost Town

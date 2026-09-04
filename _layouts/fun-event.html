@@ -58,7 +58,7 @@ layout: default
     <header class="fun-section-heading">
       <p class="eyebrow">Night one</p>
       <h2 id="setlist-title">Setlist</h2>
-      <p>46 songs, with a few moments from the night.</p>
+      <p>46 songs, with clips from throughout the night.</p>
     </header>
 
     <ol class="fun-setlist">
@@ -74,30 +74,56 @@ layout: default
               {% for media in song.media %}
                 {% if media.kind == 'video' %}
                   <figure class="fun-media fun-media--video">
-                    <video
-                      controls
-                      playsinline
-                      preload="none"
-                      poster="{{ media.poster | relative_url }}"
-                      width="{{ media.width }}"
-                      height="{{ media.height }}"
-                      aria-label="{{ media.alt | escape }}"
+                    <button
+                      class="fun-media-preview fun-media-preview--video"
+                      type="button"
+                      aria-label="Play {{ media.caption | default: media.alt | escape }} in a larger view"
+                      aria-haspopup="dialog"
+                      data-fun-media-open
+                      data-media-kind="video"
+                      data-media-src="{{ media.src | relative_url }}"
+                      data-media-poster="{{ media.poster | relative_url }}"
+                      data-media-alt="{{ media.alt | escape }}"
+                      data-media-caption="{{ media.caption | escape }}"
                     >
-                      <source src="{{ media.src | relative_url }}" type="video/mp4">
-                      <p>Your browser cannot play this video. <a href="{{ media.src | relative_url }}">Open it directly.</a></p>
-                    </video>
+                      <img
+                        src="{{ media.poster | relative_url }}"
+                        alt=""
+                        width="{{ media.width }}"
+                        height="{{ media.height }}"
+                        loading="lazy"
+                        decoding="async"
+                      >
+                      <span class="fun-media-play" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                          <path d="M9 7.6v8.8L16 12 9 7.6Z"></path>
+                        </svg>
+                      </span>
+                    </button>
                     {% if media.caption %}<figcaption>{{ media.caption }}</figcaption>{% endif %}
                   </figure>
                 {% elsif media.kind == 'image' %}
                   <figure class="fun-media fun-media--image">
-                    <img
-                      src="{{ media.src | relative_url }}"
-                      alt="{{ media.alt }}"
-                      width="{{ media.width }}"
-                      height="{{ media.height }}"
-                      loading="lazy"
-                      decoding="async"
+                    <button
+                      class="fun-media-preview fun-media-preview--image"
+                      type="button"
+                      aria-label="Open larger view: {{ media.alt | escape }}"
+                      aria-haspopup="dialog"
+                      data-fun-media-open
+                      data-media-kind="image"
+                      data-media-src="{{ media.src | relative_url }}"
+                      data-media-alt="{{ media.alt | escape }}"
+                      data-media-caption="{{ media.caption | escape }}"
                     >
+                      <img
+                        src="{{ media.src | relative_url }}"
+                        alt=""
+                        width="{{ media.width }}"
+                        height="{{ media.height }}"
+                        loading="lazy"
+                        decoding="async"
+                      >
+                    </button>
                     {% if media.caption %}<figcaption>{{ media.caption }}</figcaption>{% endif %}
                   </figure>
                 {% endif %}
@@ -113,3 +139,13 @@ layout: default
     Setlist based on <a href="{{ event.setlist_source }}">NFR Podcast’s night-one post</a>; Homecoming is corrected here to two performances.
   </p>
 </article>
+
+<dialog class="image-lightbox fun-media-lightbox" role="dialog" aria-modal="true" aria-label="Expanded concert media" data-fun-media-dialog>
+  <button class="image-lightbox-close" type="button" aria-label="Close expanded media" data-fun-media-close>×</button>
+  <div class="image-lightbox-stage fun-media-lightbox-stage">
+    <img src="" alt="" data-fun-media-image hidden>
+    <video controls playsinline preload="none" data-fun-media-video hidden></video>
+    <p class="image-lightbox-caption" data-fun-media-caption hidden></p>
+  </div>
+</dialog>
+<script src="{{ '/assets/js/fun-media-lightbox.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

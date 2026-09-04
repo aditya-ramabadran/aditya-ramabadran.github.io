@@ -2,6 +2,7 @@
   var root = document.documentElement;
   var button = document.querySelector("[data-theme-toggle]");
   var label = document.querySelector("[data-theme-label]");
+  var systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
   function updateLabel() {
     if (!label) return;
@@ -15,6 +16,16 @@
       localStorage.setItem("theme", next);
       updateLabel();
     });
+  }
+
+  function followSystemTheme(event) {
+    if (localStorage.getItem("theme")) return;
+    root.dataset.theme = event.matches ? "dark" : "light";
+    updateLabel();
+  }
+
+  if (typeof systemTheme.addEventListener === "function") {
+    systemTheme.addEventListener("change", followSystemTheme);
   }
 
   updateLabel();

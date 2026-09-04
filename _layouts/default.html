@@ -78,6 +78,13 @@
         </button>
       </header>
       {% endunless %}
+      {% if page.hide_sidebar %}
+        <div class="standalone-theme-control">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">
+            <span data-theme-label>Dark mode</span>
+          </button>
+        </div>
+      {% endif %}
 
       <main id="content" class="content{% if page.layout == 'post' %} content--post{% elsif page.url == '/' %} content--home{% endif %}">
         {{ content }}
