@@ -128,8 +128,8 @@ setlist:
         poster: /assets/images/fun/ye-chicago-2026/posters/homecoming-shared.webp
         alt: Video of Ye performing the Chicago verse of Homecoming above the Earth stage
         caption: The Chicago verse from the floor
-        width: 720
-        height: 1280
+        width: 1280
+        height: 720
       - kind: image
         src: /assets/images/fun/ye-chicago-2026/homecoming-shared.webp
         alt: Ye performing above the blue Earth stage during Homecoming as the crowd raises its hands
@@ -144,8 +144,8 @@ setlist:
         poster: /assets/images/fun/ye-chicago-2026/posters/father-stretch-my-hands.webp
         alt: Video of Ye performing Father Stretch My Hands, Pt. 1 above the Earth stage
         caption: Father Stretch My Hands, Pt. 1
-        width: 720
-        height: 1280
+        width: 1280
+        height: 720
   - title: Can’t Tell Me Nothing
     album: graduation
     media:
