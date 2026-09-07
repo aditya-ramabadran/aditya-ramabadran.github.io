@@ -123,8 +123,29 @@ setlist:
         caption: Ye walking out to Homecoming
         width: 720
         height: 1280
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/homecoming-shared.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/homecoming-shared.webp
+        alt: Video of Ye performing the Chicago verse of Homecoming above the Earth stage
+        caption: The Chicago verse from the floor
+        width: 720
+        height: 1280
+      - kind: image
+        src: /assets/images/fun/ye-chicago-2026/homecoming-shared.webp
+        alt: Ye performing above the blue Earth stage during Homecoming as the crowd raises its hands
+        caption: Homecoming from the crowd
+        width: 1800
+        height: 1012
   - title: Father Stretch My Hands, Pt. 1
     album: life-of-pablo
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/father-stretch-my-hands.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/father-stretch-my-hands.webp
+        alt: Video of Ye performing Father Stretch My Hands, Pt. 1 above the Earth stage
+        caption: Father Stretch My Hands, Pt. 1
+        width: 720
+        height: 1280
   - title: Can’t Tell Me Nothing
     album: graduation
     media:
@@ -142,20 +163,90 @@ setlist:
         height: 2200
   - title: N——s in Paris
     album: watch-the-throne
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/paris.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/paris.webp
+        alt: Wide video of Ye performing N——s in Paris over the Earth stage and lasers
+        caption: N——s in Paris
+        width: 1280
+        height: 720
   - title: No Church in the Wild
     album: watch-the-throne
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/no-church-in-the-wild.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/no-church-in-the-wild.webp
+        alt: Wide video of Ye performing No Church in the Wild on the Earth stage
+        caption: No Church in the Wild
+        width: 1280
+        height: 720
+      - kind: image
+        src: /assets/images/fun/ye-chicago-2026/no-church-lasers.webp
+        alt: Ye standing above the grayscale Earth as multicolored lasers converge overhead
+        caption: Between N——s in Paris and No Church in the Wild
+        width: 1350
+        height: 1800
   - title: Off the Grid
     album: donda
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/off-the-grid.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/off-the-grid.webp
+        alt: Video of the crowd and Earth stage during Off the Grid
+        caption: Off the Grid
+        width: 1280
+        height: 720
   - title: Praise God
     album: donda
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/praise-god.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/praise-god.webp
+        alt: Short video of Ye under a red beam during Praise God
+        caption: Praise God
+        width: 720
+        height: 1280
   - title: Black Skinhead
     album: yeezus
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/black-skinhead.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/black-skinhead.webp
+        alt: Video of Ye performing Black Skinhead beneath a red beam
+        caption: Black Skinhead
+        width: 720
+        height: 1280
   - title: On Sight
     album: yeezus
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/on-sight.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/on-sight.webp
+        alt: Video from the mosh pit during On Sight
+        caption: On Sight in the crowd
+        width: 720
+        height: 1280
   - title: Blood on the Leaves
     album: yeezus
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/blood-on-the-leaves.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/blood-on-the-leaves.webp
+        alt: Wide video of Blood on the Leaves on the red-lit Earth stage
+        caption: Blood on the Leaves
+        width: 1280
+        height: 720
   - title: Carnival
     album: vultures-1
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/carnival.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/carnival.webp
+        alt: Video of the Carnival hook from the floor at Soldier Field
+        caption: Carnival
+        width: 720
+        height: 1280
   - title: Power
     album: mbdtf
     media:
@@ -168,6 +259,14 @@ setlist:
         height: 1280
   - title: Fade
     album: life-of-pablo
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/fade.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/fade.webp
+        alt: Short crowd video during Fade
+        caption: Fade from the floor
+        width: 720
+        height: 1280
   - title: Love Lockdown
     album: 808s-and-heartbreak
     media:
@@ -180,6 +279,14 @@ setlist:
         height: 1280
   - title: Bound 2
     album: yeezus
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/bound-2.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/bound-2.webp
+        alt: Wide video of Ye performing Bound 2 above the Earth stage
+        caption: Bound 2
+        width: 1280
+        height: 720
   - title: I Wonder
     album: graduation
     media:
@@ -216,6 +323,14 @@ setlist:
         height: 1280
   - title: King
     album: bully
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/king.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/king.webp
+        alt: Short crowd video during King
+        caption: King from the floor
+        width: 720
+        height: 1280
   - title: Father
     album: bully
     media:
@@ -228,6 +343,14 @@ setlist:
         height: 1280
   - title: All the Love
     album: bully
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/all-the-love.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/all-the-love.webp
+        alt: Video of Ye performing All the Love beneath a red beam
+        caption: All the Love
+        width: 720
+        height: 1280
   - title: I Can’t Wait
     album: bully
   - title: Everybody
@@ -242,8 +365,24 @@ setlist:
         height: 1280
   - title: Famous
     album: life-of-pablo
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/famous.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/famous.webp
+        alt: Video of Ye performing Famous beneath a red beam
+        caption: Famous
+        width: 720
+        height: 1280
   - title: Run This Town
     album: blueprint-3
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/run-this-town.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/run-this-town.webp
+        alt: Video of Ye performing Run This Town above the red-lit Earth stage
+        caption: Run This Town
+        width: 720
+        height: 1280
   - title: Clique
     album: cruel-summer
     note: with Big Sean
@@ -293,6 +432,12 @@ setlist:
         caption: Birthday Song with 2 Chainz
         width: 720
         height: 1280
+      - kind: image
+        src: /assets/images/fun/ye-chicago-2026/birthday-song-shared.webp
+        alt: Three performers together on the Earth stage during the guest set
+        caption: Three onstage during the guest run
+        width: 1012
+        height: 1800
   - title: Keep It Burnin
     album: i-never-liked-you
     note: with Future
@@ -307,6 +452,14 @@ setlist:
   - title: F—k Up Some Commas
     album: ds2-deluxe
     note: by Future
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/fuck-up-some-commas.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/fuck-up-some-commas.webp
+        alt: Video of Future performing F—k Up Some Commas on the Earth stage
+        caption: F—k Up Some Commas by Future
+        width: 720
+        height: 1280
   - title: American Boy
     album: shine
     media:
@@ -393,6 +546,14 @@ setlist:
         height: 1280
   - title: Flashing Lights
     album: graduation
+    media:
+      - kind: video
+        src: /assets/videos/fun/ye-chicago-2026/flashing-lights.mp4
+        poster: /assets/images/fun/ye-chicago-2026/posters/flashing-lights.webp
+        alt: Video of Ye performing Flashing Lights late in the set
+        caption: Flashing Lights
+        width: 720
+        height: 1280
   - title: Stronger
     album: graduation
   - title: Ghost Town
