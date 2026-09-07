@@ -3,6 +3,7 @@ description: Notes, research, selected work across AI, math, and computer scienc
 url: "https://adityaramabadran.com"
 baseurl: ""
 repository: aditya-ramabadran/aditya-ramabadran.github.io
+google_analytics: "G-NF0TR32P9T"
 
 author:
   name: Aditya Ramabadran
