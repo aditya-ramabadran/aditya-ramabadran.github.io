@@ -10,6 +10,7 @@ description: Notes, research, selected work across AI, math, and computer scienc
 <section class="intro">
   <p>I am a Member of Technical Staff at <a href="https://axiommath.ai/">Axiom Math</a>, where I work on post-training for formal mathematical reasoning agents.</p>
   <p>Previously, I studied mathematics and computer science at UC Berkeley. I did robotics and reinforcement learning research in <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/svlevine.html">Sergey Levine’s</a> lab, harmonic analysis with <a href="https://math.washington.edu/people/bobby-wilson">Bobby Wilson</a>, and dispersive PDE with <a href="https://sites.google.com/view/david-bowman/home">David Bowman</a>. I was set to begin a mathematics PhD at UCLA in fall 2026, but chose instead to work in AI.</p>
+  <p>Outside of work, I like playing and watching basketball, lifting, running, and spending too much time on Twitter.</p>
 </section>
 
 <div class="timeline" aria-label="Career and research history">
