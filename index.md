@@ -69,7 +69,13 @@ description: Notes, research, selected work across AI, math, and computer scienc
       <p>Studied mathematics and computer science.</p>
       <p class="timeline-note"><span>Teaching</span>Four-time teaching assistant for EECS 127 (Convex Optimization); contributed to the <a href="https://eecs127.github.io/assets/notes/eecs127_reader.pdf">course reader</a>.</p>
       <p class="timeline-note"><span>Courses</span><a href="{{ '/courses/' | relative_url }}">Here</a> is a list of some of the courses I took.</p>
-      <p class="timeline-note"><span>Course projects</span><a href="{{ '/navier_stokes_pde_paper.pdf' | relative_url }}">Math 222B Final Project (Navier Stokes)</a></p>
+      <div class="timeline-note timeline-projects">
+        <span>Course projects</span>
+        <ul>
+          <li><a href="{{ '/rpcholesky_paper.pdf' | relative_url }}">Math 221 Final Project (RPCholesky)</a></li>
+          <li><a href="{{ '/navier_stokes_pde_paper.pdf' | relative_url }}">Math 222B Final Project (Navier Stokes)</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

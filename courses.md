@@ -20,7 +20,15 @@ permalink: /courses/
       <li><span class="course-code">MATH 202A / 202B</span><span>Introduction to Topology and Analysis</span></li>
       <li><span class="course-code">MATH 205</span><span>Theory of Functions of a Complex Variable</span></li>
       <li><span class="course-code">MATH 206</span><span>Functional Analysis</span></li>
-      <li><span class="course-code">MATH 221</span><span>Advanced Matrix Computations</span></li>
+      <li>
+        <span class="course-code">MATH 221</span>
+        <span>
+          Advanced Matrix Computations
+          <ul class="course-project-list">
+            <li><a href="{{ '/rpcholesky_paper.pdf' | relative_url }}">Math 221 Final Project (RPCholesky)</a></li>
+          </ul>
+        </span>
+      </li>
       <li>
         <span class="course-code">MATH 222A / 222B</span>
         <span>
