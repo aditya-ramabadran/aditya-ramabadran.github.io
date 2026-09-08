@@ -461,6 +461,18 @@ p {
   padding: 0.3rem 0;
 }
 
+.course-project-list {
+  margin: 0.35rem 0 0 1.15rem;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.course-list .course-project-list li {
+  display: list-item;
+  padding: 0.15rem 0;
+}
+
 .course-code {
   color: var(--faint);
   font-size: 0.78rem;

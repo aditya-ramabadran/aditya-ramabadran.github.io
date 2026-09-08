@@ -21,7 +21,15 @@ permalink: /courses/
       <li><span class="course-code">MATH 205</span><span>Theory of Functions of a Complex Variable</span></li>
       <li><span class="course-code">MATH 206</span><span>Functional Analysis</span></li>
       <li><span class="course-code">MATH 221</span><span>Advanced Matrix Computations</span></li>
-      <li><span class="course-code">MATH 222A</span><span>Partial Differential Equations</span></li>
+      <li>
+        <span class="course-code">MATH 222A / 222B</span>
+        <span>
+          Partial Differential Equations
+          <ul class="course-project-list">
+            <li><a href="{{ '/navier_stokes_pde_paper.pdf' | relative_url }}">Math 222B Final Project (Navier Stokes)</a></li>
+          </ul>
+        </span>
+      </li>
       <li><span class="course-code">MATH 258</span><span>Harmonic Analysis</span></li>
     </ul>
   </div>
