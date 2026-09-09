@@ -68,6 +68,7 @@ description: Notes, research, selected work across AI, math, and computer scienc
     <div class="timeline-copy">
       <h3><a href="https://www.berkeley.edu/">UC Berkeley</a></h3>
       <p>Studied mathematics and computer science.</p>
+      <p class="timeline-note"><span>GPA</span>4.0 / 4.0</p>
       <p class="timeline-note"><span>Teaching</span>Four-time teaching assistant for EECS 127 (Convex Optimization); contributed to the <a href="https://eecs127.github.io/assets/notes/eecs127_reader.pdf">course reader</a>.</p>
       <p class="timeline-note"><span>Courses</span><a href="{{ '/courses/' | relative_url }}">Here</a> is a list of some of the courses I took.</p>
       <div class="timeline-note timeline-projects">
