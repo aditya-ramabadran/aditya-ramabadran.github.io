@@ -15,13 +15,6 @@
     {% endif %}
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
-    <script>
-      (function () {
-        var saved = localStorage.getItem("theme");
-        var dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        document.documentElement.dataset.theme = saved || (dark ? "dark" : "light");
-      }());
-    </script>
     {% if page.browser_title %}
       {% seo title=false %}
       <title>{{ page.browser_title | escape }}</title>
@@ -82,19 +75,8 @@
             </a>
           </div>
         </nav>
-
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">
-          <span data-theme-label>Dark mode</span>
-        </button>
       </header>
       {% endunless %}
-      {% if page.hide_sidebar %}
-        <div class="standalone-theme-control">
-          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">
-            <span data-theme-label>Dark mode</span>
-          </button>
-        </div>
-      {% endif %}
 
       <main id="content" class="content{% if page.layout == 'post' %} content--post{% elsif page.url == '/' %} content--home{% endif %}">
         {{ content }}
@@ -103,6 +85,5 @@
         </footer>
       </main>
     </div>
-    <script src="{{ '/assets/js/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   </body>
 </html>
