@@ -466,6 +466,16 @@ p {
   padding: 0.15rem 0;
 }
 
+.course-instructor {
+  color: var(--faint);
+  font-size: 0.82rem;
+}
+
+.course-instructor::before {
+  content: "\00b7";
+  margin: 0 0.38rem;
+}
+
 .course-code {
   color: var(--faint);
   font-size: 0.78rem;
