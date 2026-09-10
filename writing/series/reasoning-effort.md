@@ -18,4 +18,4 @@ series_key: reasoning-effort
   <p class="series-article-count">{{ series_posts.size }} article{% unless series_posts.size == 1 %}s{% endunless %}</p>
 </header>
 
-{% include post-list.html posts=series_posts show_series=false %}
+{% include post-list.html posts=series_posts in_series=true %}

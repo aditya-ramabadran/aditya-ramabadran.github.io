@@ -8,8 +8,12 @@
     {% for post in listed_posts limit: include.limit %}
       <li class="post-list-item">
         <div class="post-list-meta">
+          {% if include.in_series %}
+            {% assign series_number = post.series_order | prepend: "0" | slice: -2, 2 %}
+            <span class="post-list-order">{{ series_number }}</span>
+          {% endif %}
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-          {% if post.series and include.show_series != false %}
+          {% if post.series and include.in_series != true %}
             {% assign post_series = site.data.series[post.series] %}
             {% if post_series %}
               {% assign series_number = post.series_order | prepend: "0" | slice: -2, 2 %}

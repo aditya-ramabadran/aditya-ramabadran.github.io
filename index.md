@@ -86,7 +86,29 @@ description: Notes, research, selected work across AI, math, and computer scienc
 <aside class="home-writing" aria-label="Writing preview">
 <h2>Writing</h2>
 
-{% include post-list.html limit=3 %}
+{% assign home_post_count = 0 %}
+{% assign home_post_limit = 3 %}
+{% for series_entry in site.data.series %}
+  {% assign series_key = series_entry[0] %}
+  {% assign series = series_entry[1] %}
+  {% assign series_posts = site.posts | where: "series", series_key %}
+  {% if series_posts.size > 0 and home_post_count < home_post_limit %}
+    <section class="home-writing-group" aria-labelledby="home-series-{{ series_key }}">
+      <h3 class="home-writing-group-title" id="home-series-{{ series_key }}"><a href="{{ series.url | relative_url }}">{{ series.title }} <span aria-hidden="true">→</span></a></h3>
+      {% include post-list.html posts=series_posts in_series=true limit=1 %}
+    </section>
+    {% assign home_post_count = home_post_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% assign other_posts = site.posts | where_exp: "post", "post.series == nil" %}
+{% if other_posts.size > 0 and home_post_count < home_post_limit %}
+  {% assign other_post_limit = home_post_limit | minus: home_post_count %}
+  <section class="home-writing-group home-writing-other" aria-labelledby="home-other-writing">
+    <h3 class="home-writing-group-title" id="home-other-writing">Other writing</h3>
+    {% include post-list.html posts=other_posts limit=other_post_limit %}
+  </section>
+{% endif %}
 
 <p class="writing-all"><a href="{{ '/writing/' | relative_url }}">View all writing <span aria-hidden="true">→</span></a></p>
 </aside>

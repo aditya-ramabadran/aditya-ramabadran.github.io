@@ -360,6 +360,10 @@ p {
   text-transform: lowercase;
 }
 
+.post-list-order {
+  font-variant-numeric: tabular-nums;
+}
+
 .post-list-series {
   color: var(--faint);
   text-decoration: none;
@@ -423,12 +427,8 @@ p {
   color: var(--muted);
 }
 
-.writing-series-index {
-  margin: -0.35rem 0 2.75rem;
-}
-
-.writing-series-index h2,
-.writing-list-title {
+.writing-section-label,
+.writing-other h2 {
   margin: 0 0 0.65rem;
   color: var(--faint);
   font-size: 0.7rem;
@@ -437,45 +437,38 @@ p {
   text-transform: uppercase;
 }
 
-.writing-series-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.writing-series-group {
+  margin-bottom: 3rem;
+}
+
+.writing-series-header {
+  padding: 0.9rem 0 1rem;
   border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
 }
 
-.writing-series-list li {
-  padding: 0.9rem 0;
+.writing-series-header h2 {
+  margin: 0;
+  font-size: 1rem;
 }
 
-.writing-series-link {
-  display: flex;
-  gap: 1rem;
-  align-items: baseline;
-  justify-content: space-between;
+.writing-series-header h2 a {
   color: var(--text);
-  font-size: 0.94rem;
-  font-weight: 600;
   text-decoration: none;
 }
 
-.writing-series-link:hover {
+.writing-series-header h2 a:hover {
   color: var(--accent);
 }
 
-.writing-series-count {
-  flex: 0 0 auto;
-  color: var(--faint);
-  font-size: 0.72rem;
-  font-weight: 400;
-}
-
-.writing-series-list p {
+.writing-series-header p {
   max-width: 58ch;
   margin: 0.25rem 0 0;
   color: var(--muted);
   font-size: 0.84rem;
+}
+
+.writing-other {
+  margin-top: 3rem;
 }
 
 .series-intro .back-link {
@@ -1655,6 +1648,28 @@ p {
     margin: 0;
     padding: 0 0 0.75rem;
     font-size: 1rem;
+  }
+
+  .home-writing-group + .home-writing-group {
+    margin-top: 1.35rem;
+  }
+
+  .home-writing-group-title {
+    margin: 0 0 0.35rem;
+    color: var(--faint);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .home-writing-group-title a {
+    color: var(--faint);
+    text-decoration: none;
+  }
+
+  .home-writing-group-title a:hover {
+    color: var(--accent);
   }
 
   .home-writing .post-list-item {
