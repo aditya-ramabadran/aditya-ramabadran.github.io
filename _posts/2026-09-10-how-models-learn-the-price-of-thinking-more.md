@@ -75,7 +75,7 @@ k(b) = k_0 \exp\left( -\frac{b-b_{\min}}{\tau} \right),
 
 meaning that the penalty coefficient decreases exponentially with effort. So the effective price of a reasoning token (ignoring the cap), is then <span class="math">\\(\mu(b) \propto \exp\left(-\frac{b}{\tau}\right).\\)</span> So every additive increase in the effort number makes reasoning **multiplicatively cheaper**. We can also rewrite this as <span class="math">\\(b=\text{constant}-\tau\log\mu\\)</span>, so we can think of the reasoning number <span class="math">\\(b\\)</span> as approximately a log coordinate for the price of reasoning compute.
 
-DeepSeek then makes the assumption (in [Appendix C of the report](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf#page=49)) that the marginal benefit of more reasoning falls roughly exponentially, i.e. <span class="math">\\(p^{\prime}(\ell) \approx a e^{-\ell/s}\\)</span>. At the optimum reasoning length <span class="math">\\(\ell^\star\\)</span>, we have
+DeepSeek then makes the assumption (in [Appendix C of the report](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf#page=49)) that the marginal benefit of more reasoning falls roughly exponentially, i.e. <span class="math">\\(p^{\prime}(\ell) \approx a e^{-\ell/s}.\\)</span> At the optimum reasoning length <span class="math">\\(\ell^\star\\)</span>, we have
 
 <div class="math-display">
 \[
@@ -100,6 +100,8 @@ and taking logs we get
 </div>
 
 The tldr is: if we assume exponentially diminishing returns to thinking, and exponentially decreasing token price, then this gives <span class="math">\\(\approx\\)</span> linear reasoning length as a function of effort. (Just to be clear, this is about reasoning/output _length_ rather than performance.)
+
+<p class="effort-widget-kicker">CODEX GENERATED INTERACTIVE FIGURE, HOPEFULLY THIS IS HELPFUL</p>
 
 <figure class="effort-widget" data-effort-widget>
   <img class="effort-widget-fallback" data-effort-widget-fallback src="{{ '/assets/images/writing/deepseek-swe2/token-price-intersections.png' | relative_url }}" alt="A smaller effective per-token RL penalty intersects a decreasing marginal-benefit curve at a longer reasoning length" width="1800" height="1020" loading="lazy">

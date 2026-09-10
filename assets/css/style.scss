@@ -999,6 +999,19 @@ p {
   line-height: 1.45;
 }
 
+.effort-widget-kicker {
+  margin: 1.75rem 0 0;
+  color: var(--faint);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.45;
+}
+
+.effort-widget-kicker + .effort-widget {
+  margin-top: 0.55rem;
+}
+
 .effort-widget-shell {
   overflow: hidden;
   border: 1px solid var(--border);
