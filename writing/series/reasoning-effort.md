@@ -2,7 +2,7 @@
 layout: default
 title: Reasoning effort
 browser_title: "Reasoning effort | Aditya Ramabadran"
-description: Notes and experiments about how reasoning models control, allocate, and learn different levels of test-time computation.
+description: For some reason I've been obsessed with reasoning effort levels and post-training length penalties, so here are some interesting notes on that.
 permalink: /writing/series/reasoning-effort/
 series_key: reasoning-effort
 ---
