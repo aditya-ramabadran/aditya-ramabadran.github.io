@@ -3,6 +3,8 @@ title: '"Juice Numbers" and the awkward way GPT reasoning efforts work'
 date: 2026-08-21
 last_modified_at: 2026-08-24
 format: Article + X
+series: reasoning-effort
+series_order: 1
 description: "An investigation of how GPT reasoning-effort settings map to hidden juice values, affect prompt caching, and may be learned during post-training."
 external_url: "https://x.com/a_ramabadran/status/2090841929621885084"
 hero_image: "/assets/images/writing/juice-numbers/hero-1200x630.jpg"

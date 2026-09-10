@@ -1,9 +1,21 @@
-{% if site.posts.size > 0 %}
+{% if include.posts %}
+  {% assign listed_posts = include.posts %}
+{% else %}
+  {% assign listed_posts = site.posts %}
+{% endif %}
+{% if listed_posts.size > 0 %}
   <ol class="post-list">
-    {% for post in site.posts limit: include.limit %}
+    {% for post in listed_posts limit: include.limit %}
       <li class="post-list-item">
         <div class="post-list-meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+          {% if post.series and include.show_series != false %}
+            {% assign post_series = site.data.series[post.series] %}
+            {% if post_series %}
+              {% assign series_number = post.series_order | prepend: "0" | slice: -2, 2 %}
+              <a class="post-list-series" href="{{ post_series.url | relative_url }}">{{ post_series.title }} · {{ series_number }}</a>
+            {% endif %}
+          {% endif %}
           {% if post.format %}<span>{{ post.format }}</span>{% endif %}
         </div>
         <div>

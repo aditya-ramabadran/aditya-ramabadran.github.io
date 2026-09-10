@@ -1,0 +1,4 @@
+reasoning-effort:
+  title: Reasoning effort
+  description: Notes and experiments about how reasoning models control, allocate, and learn different levels of test-time computation.
+  url: /writing/series/reasoning-effort/
