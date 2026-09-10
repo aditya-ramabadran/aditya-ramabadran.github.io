@@ -28,6 +28,9 @@ layout: default
   <header class="post-header">
     <p class="eyebrow">{{ page.format | default: "Note" }}</p>
     <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p class="post-deck">{{ page.subtitle }}</p>
+    {% endif %}
     <div class="post-meta-row">
       <div class="post-meta-copy">
         <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</p>
@@ -109,6 +112,9 @@ layout: default
     }());
   </script>
   <script src="{{ '/assets/js/post-math.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+{% endif %}
+{% if page.token_price_widget %}
+  <script src="{{ '/assets/js/token-price-widget.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 {% endif %}
 {% unless page.lightbox == false %}
   <dialog class="image-lightbox" aria-label="Expanded image" data-image-lightbox>

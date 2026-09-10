@@ -3,7 +3,7 @@
   var lightboxImage = document.querySelector("[data-image-lightbox-image]");
   var caption = document.querySelector("[data-image-lightbox-caption]");
   var closeButton = document.querySelector("[data-image-lightbox-close]");
-  var images = Array.prototype.slice.call(document.querySelectorAll(".post-hero img, .post-body figure img"));
+  var images = Array.prototype.slice.call(document.querySelectorAll(".post-hero img, .post-body figure img:not([data-effort-widget-fallback])"));
   var lastTrigger = null;
 
   if (!dialog || !lightboxImage || !caption || !closeButton || !images.length) return;
