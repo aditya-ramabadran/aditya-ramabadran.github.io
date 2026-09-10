@@ -21,7 +21,10 @@ permalink: /writing/
 {% if series_posts.size > 0 %}
 <section class="writing-series-group" aria-labelledby="series-{{ series_key }}">
   <header class="writing-series-header">
-    <h2 id="series-{{ series_key }}"><a href="{{ series.url | relative_url }}">{{ series.title }} <span aria-hidden="true">→</span></a></h2>
+    <div class="writing-series-heading-row">
+      <h2 id="series-{{ series_key }}"><a href="{{ series.url | relative_url }}">{{ series.title }} <span aria-hidden="true">→</span></a></h2>
+      <span class="writing-series-count">{{ series_posts.size }} article{% unless series_posts.size == 1 %}s{% endunless %}</span>
+    </div>
     <p>{{ series.description }}</p>
   </header>
   {% include post-list.html posts=series_posts in_series=true %}
