@@ -1,0 +1,457 @@
+---
+layout: null
+title: Jerry sun sucks
+permalink: /fun/jerry-sucks/
+sitemap: false
+unlisted: true
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="theme-color" content="#ff5f05">
+    <title>Jerry sun sucks</title>
+    <style>
+      :root {
+        --illinois-blue: #032f62;
+        --illinois-orange: #ff5f05;
+        --paper: #fff8df;
+        --ink: #11131a;
+        --electric: #dfff3f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-height: 100%;
+        background: var(--illinois-blue);
+      }
+
+      body {
+        min-height: 100svh;
+        margin: 0;
+        overflow-x: hidden;
+        color: var(--ink);
+        font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+        background:
+          radial-gradient(circle at 12% 22%, rgb(223 255 63 / 82%) 0 4%, transparent 4.2%),
+          radial-gradient(circle at 91% 75%, rgb(255 95 5 / 80%) 0 7%, transparent 7.2%),
+          repeating-conic-gradient(from 12deg at 50% 50%, #ff7b2f 0deg 12deg, #fff8df 12deg 24deg);
+        background-size: auto, auto, 180% 180%;
+        animation: background-wobble 12s linear infinite alternate;
+      }
+
+      body::before {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        background-image: radial-gradient(rgb(3 47 98 / 22%) 2px, transparent 2px);
+        background-size: 25px 25px;
+        content: "";
+        pointer-events: none;
+        animation: dots-drift 8s linear infinite;
+      }
+
+      .ticker {
+        position: fixed;
+        z-index: 20;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        border-block: 4px solid var(--ink);
+        color: white;
+        background: var(--illinois-blue);
+        box-shadow: 0 6px 0 rgb(17 19 26 / 20%);
+        font-size: clamp(.72rem, 1.7vw, 1.1rem);
+        letter-spacing: .09em;
+        line-height: 2.35;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .ticker--top {
+        top: 0;
+        transform: rotate(-.4deg) scale(1.01);
+      }
+
+      .ticker--bottom {
+        bottom: 0;
+        color: var(--ink);
+        background: var(--electric);
+        box-shadow: 0 -6px 0 rgb(17 19 26 / 20%);
+        transform: rotate(.45deg) scale(1.01);
+      }
+
+      .ticker__track {
+        display: inline-block;
+        min-width: max-content;
+        animation: marquee 18s linear infinite;
+      }
+
+      .ticker--bottom .ticker__track {
+        animation-direction: reverse;
+        animation-duration: 14s;
+      }
+
+      .ticker span {
+        margin-inline: 1.2rem;
+      }
+
+      .stage {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        min-height: 100svh;
+        place-items: center;
+        padding: clamp(5.5rem, 9vw, 7rem) clamp(1rem, 4vw, 3rem);
+      }
+
+      .card {
+        position: relative;
+        display: grid;
+        width: min(1100px, 94vw);
+        grid-template-columns: minmax(240px, .78fr) minmax(340px, 1.22fr);
+        align-items: center;
+        gap: clamp(1.5rem, 5vw, 4.5rem);
+        border: clamp(5px, .7vw, 9px) solid var(--ink);
+        border-radius: 32px 10px 40px 14px;
+        padding: clamp(1.3rem, 4vw, 3.5rem);
+        background: rgb(255 248 223 / 94%);
+        box-shadow: 18px 18px 0 var(--illinois-blue), -10px -10px 0 var(--electric);
+        transform: rotate(-.75deg);
+        isolation: isolate;
+        animation: card-float 3.8s ease-in-out infinite;
+      }
+
+      .card::before {
+        position: absolute;
+        z-index: -1;
+        inset: 12px;
+        border: 2px dashed rgb(3 47 98 / 35%);
+        border-radius: 22px;
+        content: "";
+        pointer-events: none;
+      }
+
+      .portrait-shell {
+        position: relative;
+        justify-self: center;
+        width: min(100%, 390px);
+        aspect-ratio: 1;
+        border: 7px solid var(--ink);
+        border-radius: 48% 52% 44% 56% / 52% 46% 54% 48%;
+        background: var(--illinois-orange);
+        box-shadow: 12px 12px 0 var(--electric);
+        transform: rotate(3deg);
+        animation: portrait-wiggle 1.9s ease-in-out infinite alternate;
+      }
+
+      .portrait-shell::before,
+      .portrait-shell::after {
+        position: absolute;
+        z-index: -1;
+        border: 5px solid var(--illinois-blue);
+        border-radius: 50%;
+        content: "";
+        pointer-events: none;
+      }
+
+      .portrait-shell::before {
+        inset: -24px;
+        border-style: dashed;
+        animation: spin 7s linear infinite;
+      }
+
+      .portrait-shell::after {
+        inset: -42px;
+        border-color: var(--illinois-orange);
+        border-width: 3px;
+        border-style: dotted;
+        animation: spin 11s linear infinite reverse;
+      }
+
+      .portrait-shell img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        object-fit: cover;
+        filter: saturate(1.08) contrast(1.04);
+      }
+
+      .portrait-stamp {
+        position: absolute;
+        right: -10%;
+        bottom: 4%;
+        padding: .55rem .75rem;
+        border: 4px solid var(--ink);
+        color: white;
+        background: var(--illinois-blue);
+        font-size: clamp(.75rem, 2vw, 1.15rem);
+        letter-spacing: .06em;
+        transform: rotate(-9deg);
+        animation: stamp-pop 1.2s steps(2, jump-none) infinite;
+      }
+
+      .copy {
+        position: relative;
+        text-align: left;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin: 0 0 .7rem;
+        padding: .45rem .75rem;
+        border: 3px solid var(--ink);
+        border-radius: 999px;
+        background: var(--electric);
+        font-size: clamp(.68rem, 1.4vw, .92rem);
+        letter-spacing: .09em;
+        text-transform: uppercase;
+        transform: rotate(1deg);
+      }
+
+      h1 {
+        max-width: 8ch;
+        margin: 0;
+        color: var(--illinois-orange);
+        font-size: clamp(4.5rem, 10.5vw, 10rem);
+        letter-spacing: -.085em;
+        line-height: .78;
+        text-shadow:
+          4px 4px 0 var(--ink),
+          8px 8px 0 var(--paper),
+          12px 12px 0 var(--illinois-blue);
+        text-wrap: balance;
+        animation: headline-bounce 1.7s cubic-bezier(.36, .07, .19, .97) infinite;
+      }
+
+      .subtitle {
+        width: fit-content;
+        margin: clamp(1.6rem, 4vw, 2.5rem) 0 1.25rem;
+        padding: .65rem .85rem;
+        border: 4px solid var(--ink);
+        color: white;
+        background: var(--illinois-blue);
+        box-shadow: 7px 7px 0 var(--illinois-orange);
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        font-size: clamp(1.25rem, 3vw, 2.15rem);
+        font-weight: 900;
+        line-height: 1.05;
+        transform: rotate(-1.5deg);
+      }
+
+      .throw-button {
+        appearance: none;
+        border: 4px solid var(--ink);
+        border-radius: 999px;
+        padding: .75rem 1rem;
+        color: var(--ink);
+        background: var(--electric);
+        box-shadow: 5px 5px 0 var(--ink);
+        cursor: pointer;
+        font: 900 clamp(.82rem, 1.6vw, 1rem) / 1 "Arial Black", Arial, sans-serif;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        transition: transform 100ms ease, box-shadow 100ms ease;
+      }
+
+      .throw-button:hover {
+        transform: translate(-2px, -2px) rotate(1deg);
+        box-shadow: 8px 8px 0 var(--ink);
+      }
+
+      .throw-button:active {
+        transform: translate(4px, 4px);
+        box-shadow: 1px 1px 0 var(--ink);
+      }
+
+      .frisbee-field {
+        position: fixed;
+        z-index: 10;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .frisbee {
+        position: absolute;
+        top: var(--top, 50%);
+        left: -15vw;
+        display: grid;
+        width: var(--size, 4rem);
+        aspect-ratio: 1;
+        place-items: center;
+        font-size: var(--size, 4rem);
+        filter: drop-shadow(5px 7px 0 rgb(17 19 26 / 28%));
+        animation: frisbee-flight var(--duration, 5s) linear forwards;
+        animation-delay: var(--delay, 0s);
+        will-change: transform;
+      }
+
+      @keyframes frisbee-flight {
+        0% { transform: translate(-15vw, 12vh) rotate(0deg) scale(.65); }
+        42% { transform: translate(49vw, -18vh) rotate(620deg) scale(1.1); }
+        70% { transform: translate(83vw, 10vh) rotate(1040deg) scale(.92); }
+        100% { transform: translate(130vw, -7vh) rotate(1600deg) scale(.55); }
+      }
+
+      @keyframes marquee {
+        to { transform: translateX(-50%); }
+      }
+
+      @keyframes card-float {
+        0%, 100% { transform: translateY(0) rotate(-.75deg); }
+        50% { transform: translateY(-10px) rotate(.35deg); }
+      }
+
+      @keyframes portrait-wiggle {
+        from { transform: rotate(1deg) scale(1); }
+        to { transform: rotate(5deg) scale(1.025); }
+      }
+
+      @keyframes headline-bounce {
+        0%, 100% { transform: translateY(0) skewX(-1deg); }
+        48% { transform: translateY(-7px) skewX(1deg); }
+        55% { transform: translateY(2px) skewX(-.5deg); }
+      }
+
+      @keyframes stamp-pop {
+        0%, 100% { transform: rotate(-9deg) scale(1); }
+        50% { transform: rotate(-4deg) scale(1.08); }
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes dots-drift {
+        to { background-position: 25px 25px; }
+      }
+
+      @keyframes background-wobble {
+        to { background-position: 0 0, 0 0, 70% 45%; }
+      }
+
+      @media (max-width: 760px) {
+        .stage {
+          padding-block: 5.5rem 6rem;
+        }
+
+        .card {
+          width: min(90vw, 520px);
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          box-shadow: 10px 10px 0 var(--illinois-blue), -7px -7px 0 var(--electric);
+        }
+
+        .portrait-shell {
+          width: min(65vw, 275px);
+        }
+
+        .copy {
+          text-align: center;
+        }
+
+        .eyebrow,
+        .subtitle {
+          margin-inline: auto;
+        }
+
+        h1 {
+          max-width: none;
+          font-size: clamp(3.7rem, 18vw, 6.3rem);
+          line-height: .83;
+        }
+
+        .subtitle {
+          font-size: clamp(1.15rem, 5.5vw, 1.65rem);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: .001ms !important;
+          animation-iteration-count: 1 !important;
+        }
+
+        .ticker__track {
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ticker ticker--top" aria-hidden="true">
+      <div class="ticker__track">
+        <span>🥏 Breaking frisbee news</span><span>C-team scouts are watching</span><span>🥏 Breaking frisbee news</span><span>C-team scouts are watching</span><span>🥏 Breaking frisbee news</span><span>C-team scouts are watching</span><span>🥏 Breaking frisbee news</span><span>C-team scouts are watching</span>
+      </div>
+    </div>
+
+    <main class="stage">
+      <section class="card" aria-labelledby="roast-title">
+        <div class="portrait-shell">
+          <img src="{{ '/assets/images/fun/jerry-sucks/jerry.png' | relative_url }}" alt="Jerry smiling in a suit">
+          <span class="portrait-stamp">C-TEAM PROSPECT?</span>
+        </div>
+
+        <div class="copy">
+          <p class="eyebrow">Frisbee department emergency broadcast</p>
+          <h1 id="roast-title">Jerry sun sucks</h1>
+          <p class="subtitle">@UIUC Put him on the C team</p>
+          <button class="throw-button" id="throw-frisbees" type="button">Throw more frisbees</button>
+        </div>
+      </section>
+    </main>
+
+    <div class="ticker ticker--bottom" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Officially under review</span><span>🥏 justice for the C team</span><span>Officially under review</span><span>🥏 justice for the C team</span><span>Officially under review</span><span>🥏 justice for the C team</span><span>Officially under review</span><span>🥏 justice for the C team</span>
+      </div>
+    </div>
+
+    <div class="frisbee-field" id="frisbee-field" aria-hidden="true"></div>
+
+    <script>
+      (() => {
+        const field = document.querySelector('#frisbee-field');
+        const button = document.querySelector('#throw-frisbees');
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        function launchFrisbee(delay = 0) {
+          if (reducedMotion.matches) return;
+
+          const frisbee = document.createElement('span');
+          frisbee.className = 'frisbee';
+          frisbee.textContent = '🥏';
+          frisbee.style.setProperty('--top', `${8 + Math.random() * 78}%`);
+          frisbee.style.setProperty('--size', `${2.2 + Math.random() * 4.5}rem`);
+          frisbee.style.setProperty('--duration', `${3.4 + Math.random() * 3.2}s`);
+          frisbee.style.setProperty('--delay', `${delay}s`);
+          field.appendChild(frisbee);
+          frisbee.addEventListener('animationend', () => frisbee.remove());
+        }
+
+        function frisbeeBurst(count = 8) {
+          for (let index = 0; index < count; index += 1) {
+            launchFrisbee(index * 0.08);
+          }
+        }
+
+        button.addEventListener('click', () => frisbeeBurst(14));
+        frisbeeBurst(12);
+
+        if (!reducedMotion.matches) {
+          window.setInterval(() => launchFrisbee(), 1350);
+        }
+      })();
+    </script>
+  </body>
+</html>
