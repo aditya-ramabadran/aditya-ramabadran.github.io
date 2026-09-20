@@ -73,6 +73,17 @@
               <span class="social-icon social-icon--strava" aria-hidden="true"></span>
               <span>Strava</span>
             </a>
+            <button class="social-link email-toggle" type="button" aria-expanded="false" aria-controls="sidebar-email" data-email-toggle>
+              <span class="social-icon social-icon--email" aria-hidden="true"></span>
+              <span>Email</span>
+            </button>
+            <div class="email-reveal" id="sidebar-email" data-email-contact data-email-user="hi" data-email-domain-reversed="moc.nardabamaraytida" hidden>
+              <a class="email-address" data-email-address></a>
+              <button class="email-copy" type="button" aria-label="Copy email address" title="Copy email address" data-email-copy>
+                <span aria-hidden="true"></span>
+              </button>
+              <span class="visually-hidden" role="status" aria-live="polite" data-email-status></span>
+            </div>
           </div>
         </nav>
       </header>
@@ -85,5 +96,8 @@
         </footer>
       </main>
     </div>
+    {% unless page.hide_sidebar %}
+    <script src="{{ '/assets/js/email-contact.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+    {% endunless %}
   </body>
 </html>

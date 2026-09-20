@@ -146,13 +146,15 @@ a:hover {
   gap: 0.4rem;
 }
 
-.site-nav a {
+.site-nav a,
+.site-nav button {
   color: var(--muted);
   font-size: 0.9rem;
   text-decoration: none;
 }
 
 .site-nav a:hover,
+.site-nav button:hover,
 .site-nav a[aria-current="page"] {
   color: var(--text);
 }
@@ -203,6 +205,99 @@ a:hover {
 .social-icon--strava {
   -webkit-mask-image: url("{{ '/assets/images/social/strava.svg' | relative_url }}");
   mask-image: url("{{ '/assets/images/social/strava.svg' | relative_url }}");
+}
+
+.social-icon--email {
+  -webkit-mask-image: url("{{ '/assets/images/social/envelope.svg' | relative_url }}");
+  mask-image: url("{{ '/assets/images/social/envelope.svg' | relative_url }}");
+}
+
+.email-toggle {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  line-height: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.email-toggle:focus-visible,
+.email-copy:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.email-reveal {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: -0.08rem;
+}
+
+.email-reveal[hidden] {
+  display: none;
+}
+
+.site-nav .email-address {
+  min-width: 0;
+  color: var(--accent);
+  font-size: 0.71rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
+}
+
+.site-nav .email-address:hover {
+  color: var(--accent-hover);
+}
+
+.email-copy {
+  display: grid;
+  flex: 0 0 auto;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0;
+  padding: 0.24rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--background);
+  cursor: pointer;
+  place-items: center;
+}
+
+.email-copy span {
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  -webkit-mask-image: url("{{ '/assets/images/social/copy.svg' | relative_url }}");
+  mask-image: url("{{ '/assets/images/social/copy.svg' | relative_url }}");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.email-copy.is-copied span {
+  -webkit-mask-image: url("{{ '/assets/images/social/check.svg' | relative_url }}");
+  mask-image: url("{{ '/assets/images/social/check.svg' | relative_url }}");
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .content {
@@ -1881,6 +1976,16 @@ p {
     flex-wrap: wrap;
     align-items: center;
     gap: 0.65rem 1.2rem;
+  }
+
+  .email-reveal {
+    flex-basis: 100%;
+    justify-content: flex-start;
+    margin-top: -0.15rem;
+  }
+
+  .site-nav .email-address {
+    font-size: 0.8rem;
   }
 
   .content {
