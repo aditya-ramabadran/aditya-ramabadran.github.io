@@ -11,12 +11,21 @@ permalink: /writing/
   <p>Notes, blog posts, random thoughts.</p>
 </header>
 
-{% assign series_posts_all = site.posts | where_exp: "post", "post.series" %}
-{% if series_posts_all.size > 0 %}
+{% if site.data.series.size > 0 %}
 <p class="writing-section-label">Series</p>
 {% for series_entry in site.data.series %}
 {% assign series_key = series_entry[0] %}
 {% assign series = series_entry[1] %}
+{% if series.kind == "link_blob" %}
+<section class="writing-series-group writing-series-group--link-blob" aria-labelledby="series-{{ series_key }}">
+  <header class="writing-series-header">
+    <div class="writing-series-heading-row">
+      <h2 id="series-{{ series_key }}"><a href="{{ series.url }}">{{ series.title }} <span aria-hidden="true">→</span></a></h2>
+    </div>
+    <p class="writing-series-blob">{{ series.blurb }}</p>
+  </header>
+</section>
+{% else %}
 {% assign series_posts = site.posts | where: "series", series_key | sort: "series_order" %}
 {% if series_posts.size > 0 %}
 <section class="writing-series-group" aria-labelledby="series-{{ series_key }}">
@@ -29,6 +38,7 @@ permalink: /writing/
   </header>
   {% include post-list.html posts=series_posts in_series=true %}
 </section>
+{% endif %}
 {% endif %}
 {% endfor %}
 {% endif %}

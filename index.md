@@ -86,24 +86,42 @@ description: Notes, research, selected work across AI, math, and computer scienc
 <aside class="home-writing" aria-label="Writing preview">
 <h2>Writing</h2>
 
-{% assign home_posts = site.posts | slice: 0, 5 %}
+{% assign home_item_limit = 5 %}
+{% assign home_item_count = 0 %}
 {% for series_entry in site.data.series %}
   {% assign series_key = series_entry[0] %}
   {% assign series = series_entry[1] %}
-  {% assign series_posts = home_posts | where: "series", series_key %}
-  {% if series_posts.size > 0 %}
+  {% if series.kind == "link_blob" %}
+    {% if home_item_count < home_item_limit %}
+    <section class="home-writing-group home-writing-group--link-blob" aria-labelledby="home-series-{{ series_key }}">
+      <h3 class="home-writing-group-title" id="home-series-{{ series_key }}"><a href="{{ series.url }}">{{ series.title }} <span aria-hidden="true">→</span></a></h3>
+      <p class="home-writing-blob">{{ series.blurb }}</p>
+    </section>
+    {% assign home_item_count = home_item_count | plus: 1 %}
+    {% endif %}
+  {% else %}
+    {% assign home_items_remaining = home_item_limit | minus: home_item_count %}
+    {% assign series_posts = site.posts | where: "series", series_key %}
+    {% if series_posts.size > 0 and home_items_remaining > 0 %}
+      {% assign rendered_series_count = series_posts.size %}
+      {% if rendered_series_count > home_items_remaining %}
+        {% assign rendered_series_count = home_items_remaining %}
+      {% endif %}
     <section class="home-writing-group" aria-labelledby="home-series-{{ series_key }}">
       <h3 class="home-writing-group-title" id="home-series-{{ series_key }}"><a href="{{ series.url | relative_url }}">{{ series.title }} <span aria-hidden="true">→</span></a></h3>
-      {% include post-list.html posts=series_posts in_series=true %}
+      {% include post-list.html posts=series_posts in_series=true limit=rendered_series_count %}
     </section>
+      {% assign home_item_count = home_item_count | plus: rendered_series_count %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 
-{% assign other_posts = home_posts | where_exp: "post", "post.series == nil" %}
-{% if other_posts.size > 0 %}
+{% assign home_items_remaining = home_item_limit | minus: home_item_count %}
+{% assign other_posts = site.posts | where_exp: "post", "post.series == nil" %}
+{% if other_posts.size > 0 and home_items_remaining > 0 %}
   <section class="home-writing-group home-writing-other" aria-labelledby="home-other-writing">
     <h3 class="home-writing-group-title" id="home-other-writing">Other writing</h3>
-    {% include post-list.html posts=other_posts %}
+    {% include post-list.html posts=other_posts limit=home_items_remaining %}
   </section>
 {% endif %}
 
