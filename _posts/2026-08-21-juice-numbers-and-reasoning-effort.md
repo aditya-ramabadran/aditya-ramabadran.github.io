@@ -1,7 +1,7 @@
 ---
 title: '"Juice Numbers" and the awkward way GPT reasoning efforts work'
 date: 2026-08-21
-last_modified_at: 2026-08-24
+last_modified_at: 2026-09-22
 format: Article + X
 series: reasoning-effort
 series_order: 1
@@ -16,6 +16,8 @@ image:
   alt: "Reverse-engineering GPT reasoning effort: what juice values actually do, and how user text can override the effort setting."
 math: true
 toc: true
+update_note: >
+  **Update (September 22, 2026):** With [GPT-6 models](https://developers.openai.com/api/docs/guides/reasoning#change-reasoning-mid-conversation) and [Claude Fable 5.1 / Opus 5](https://platform.claude.com/docs/en/build-with-claude/effort#changing-effort-mid-conversation), you can now change reasoning effort mid-convo without breaking prompt caching!
 ---
 
 Recently there's been a lot of buzz on Twitter around what happens when you change the reasoning effort (low/medium/high/etc) in coding agents like Codex, ChatGPT, or the API. Many people didn't realize before that doing this actually busts the cache for your chat (and thus uses up more of your usage/credits).

@@ -43,6 +43,11 @@ layout: default
       {% endif %}
     </div>
   </header>
+  {% if page.update_note %}
+    <aside class="post-update" aria-label="Article update">
+      {{ page.update_note | markdownify }}
+    </aside>
+  {% endif %}
   {% if page.hero_image %}
     <figure class="post-hero">
       <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt }}">

@@ -1116,6 +1116,18 @@ p {
   padding-top: 1.75rem;
 }
 
+.post-update {
+  max-width: 65ch;
+  margin: 1.5rem 0 0;
+  padding: 0.8rem 1rem;
+  border-left: 2px solid var(--accent);
+  background: var(--surface);
+}
+
+.post-update p {
+  margin: 0;
+}
+
 .post-body h2,
 .post-body h3 {
   position: relative;
