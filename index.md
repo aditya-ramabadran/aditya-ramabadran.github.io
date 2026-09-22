@@ -91,11 +91,12 @@ description: Notes, research, selected work across AI, math, and computer scienc
 {% for series_entry in site.data.series %}
   {% assign series_key = series_entry[0] %}
   {% assign series = series_entry[1] %}
-  {% if series.kind == "link_blob" %}
+  {% if series.kind == "external_project" %}
     {% if home_item_count < home_item_limit %}
-    <section class="home-writing-group home-writing-group--link-blob" aria-labelledby="home-series-{{ series_key }}">
-      <h3 class="home-writing-group-title" id="home-series-{{ series_key }}"><a href="{{ series.url }}">{{ series.title }} <span aria-hidden="true">→</span></a></h3>
-      <p class="home-writing-blob">{{ series.blurb }}</p>
+    <section class="home-writing-group" aria-labelledby="home-series-{{ series_key }}">
+      <h3 class="home-writing-group-title home-writing-series-heading" id="home-series-{{ series_key }}"><a href="{{ series.url }}">{% if series.icon %}<img class="writing-series-icon" src="{{ series.icon | relative_url }}" alt="" aria-hidden="true">{% endif %}<span>{{ series.title }} <span aria-hidden="true">↗</span></span></a></h3>
+      <p class="home-writing-blob">{{ series.description }}</p>
+      {% include external-report.html report=series.report %}
     </section>
     {% assign home_item_count = home_item_count | plus: 1 %}
     {% endif %}
@@ -108,7 +109,7 @@ description: Notes, research, selected work across AI, math, and computer scienc
         {% assign rendered_series_count = home_items_remaining %}
       {% endif %}
     <section class="home-writing-group" aria-labelledby="home-series-{{ series_key }}">
-      <h3 class="home-writing-group-title" id="home-series-{{ series_key }}"><a href="{{ series.url | relative_url }}">{{ series.title }} <span aria-hidden="true">→</span></a></h3>
+      <h3 class="home-writing-group-title home-writing-series-heading" id="home-series-{{ series_key }}"><a href="{{ series.url | relative_url }}">{% if series.icon %}<img class="writing-series-icon" src="{{ series.icon | relative_url }}" alt="" aria-hidden="true">{% endif %}<span>{{ series.title }} <span aria-hidden="true">→</span></span></a></h3>
       {% include post-list.html posts=series_posts in_series=true limit=rendered_series_count %}
     </section>
       {% assign home_item_count = home_item_count | plus: rendered_series_count %}

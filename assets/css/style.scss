@@ -533,7 +533,7 @@ p {
 }
 
 .writing-series-group {
-  margin-bottom: 3rem;
+  margin-bottom: 2.25rem;
 }
 
 .writing-series-header {
@@ -557,8 +557,19 @@ p {
 }
 
 .writing-series-header h2 a {
+  display: inline-flex;
+  gap: 0.55rem;
+  align-items: center;
   color: var(--accent);
   text-decoration: none;
+}
+
+.writing-series-icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
 }
 
 .writing-series-header h2 a:hover {
@@ -582,15 +593,19 @@ p {
   line-height: 1.55;
 }
 
-.writing-series-group--link-blob .writing-series-header {
-  border-bottom: 1px solid var(--border);
+.writing-series-group .post-list-item:last-child {
+  border-bottom: 0;
 }
 
-.writing-series-header .writing-series-blob {
-  margin-top: 0.55rem;
-  color: var(--muted);
-  font-size: 0.91rem;
-  font-style: normal;
+.post-list-item--external-report .post-list-meta {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.post-list-item--external-report h3 .external-link {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: baseline;
 }
 
 .home-writing-group {
@@ -603,7 +618,22 @@ p {
 }
 
 .home-writing-group-title {
+  margin: 0;
+}
+
+.home-writing-series-heading {
   margin-bottom: 0.45rem;
+}
+
+.home-writing-series-heading a {
+  display: inline-flex;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.home-writing-series-heading .writing-series-icon {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .home-writing-blob {
@@ -2119,7 +2149,7 @@ p {
   }
 
   .home-writing-group-title {
-    margin: 0 0 0.45rem;
+    margin: 0;
     color: var(--faint);
     font-size: 0.68rem;
     font-weight: 700;

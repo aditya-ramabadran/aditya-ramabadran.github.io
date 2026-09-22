@@ -1,11 +1,16 @@
 drivingbench:
   title: DrivingBench.com
-  kind: link_blob
+  kind: external_project
   url: https://drivingbench.com/
-  blurb: >-
-    <a href="https://drivingbench.com/">Benchmark</a> testing frontier models at driving a car in real life. See the <a href="https://drivingbench.com/report">report</a>.
+  icon: /assets/images/writing/series/drivingbench.svg
+  description: Benchmark testing frontier models at driving a car in real life.
+  report:
+    title: DrivingBench report
+    url: https://drivingbench.com/report/
+    description: The evaluation design, cone course, results, and what we learned.
 
 reasoning-effort:
   title: Reasoning effort
+  icon: /assets/images/writing/series/juice-pitcher.svg
   description: For some reason I've been obsessed with reasoning effort levels and post-training length penalties, so here are some interesting notes on that.
   url: /writing/series/reasoning-effort/

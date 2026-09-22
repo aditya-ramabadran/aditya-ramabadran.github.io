@@ -1,0 +1,11 @@
+<ol class="post-list">
+  <li class="post-list-item post-list-item--external-report">
+    <div class="post-list-meta">
+      <span>Report</span>
+    </div>
+    <div>
+      <h3><a class="external-link" href="{{ include.report.url }}"><span>{{ include.report.title }}</span><span class="external-mark" aria-label="External link">↗</span></a></h3>
+      {% if include.show_description and include.report.description %}<p>{{ include.report.description }}</p>{% endif %}
+    </div>
+  </li>
+</ol>

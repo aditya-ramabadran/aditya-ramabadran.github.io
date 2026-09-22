@@ -12,18 +12,18 @@ permalink: /writing/
 </header>
 
 {% if site.data.series.size > 0 %}
-<p class="writing-section-label">Series</p>
 {% for series_entry in site.data.series %}
 {% assign series_key = series_entry[0] %}
 {% assign series = series_entry[1] %}
-{% if series.kind == "link_blob" %}
-<section class="writing-series-group writing-series-group--link-blob" aria-labelledby="series-{{ series_key }}">
+{% if series.kind == "external_project" %}
+<section class="writing-series-group" aria-labelledby="series-{{ series_key }}">
   <header class="writing-series-header">
     <div class="writing-series-heading-row">
-      <h2 id="series-{{ series_key }}"><a href="{{ series.url }}">{{ series.title }} <span aria-hidden="true">→</span></a></h2>
+      <h2 id="series-{{ series_key }}"><a href="{{ series.url }}">{% if series.icon %}<img class="writing-series-icon" src="{{ series.icon | relative_url }}" alt="" aria-hidden="true">{% endif %}<span>{{ series.title }} <span aria-hidden="true">↗</span></span></a></h2>
     </div>
-    <p class="writing-series-blob">{{ series.blurb }}</p>
+    <p>{{ series.description }}</p>
   </header>
+  {% include external-report.html report=series.report show_description=true %}
 </section>
 {% else %}
 {% assign series_posts = site.posts | where: "series", series_key | sort: "series_order" %}
@@ -31,7 +31,7 @@ permalink: /writing/
 <section class="writing-series-group" aria-labelledby="series-{{ series_key }}">
   <header class="writing-series-header">
     <div class="writing-series-heading-row">
-      <h2 id="series-{{ series_key }}"><a href="{{ series.url | relative_url }}">{{ series.title }} <span aria-hidden="true">→</span></a></h2>
+      <h2 id="series-{{ series_key }}"><a href="{{ series.url | relative_url }}">{% if series.icon %}<img class="writing-series-icon" src="{{ series.icon | relative_url }}" alt="" aria-hidden="true">{% endif %}<span>{{ series.title }} <span aria-hidden="true">→</span></span></a></h2>
       <span class="writing-series-count">{{ series_posts.size }} article{% unless series_posts.size == 1 %}s{% endunless %}</span>
     </div>
     <p>{{ series.description }}</p>
